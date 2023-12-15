@@ -2,3 +2,12 @@
   margin: 0;
   padding: 0;
 }
+
+.class {
+  &__bem {
+    color: red;
+    &-text {
+      background-color: #fff;
+    }
+  }
+}
