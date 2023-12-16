@@ -1,0 +1,38 @@
+@media (max-width: $lg) and (min-width: $md) {
+  .button {
+    &_small {
+      font-size: $fz-xxs;
+      padding: 10px 15px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .button {
+    &_small {
+      font-size: $fz-l;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .button {
+    &_small {
+      font-size: $fz-m;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .button {
+    &_small {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+    }
+  }
+}
