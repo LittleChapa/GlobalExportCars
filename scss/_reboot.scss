@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
 
@@ -48,4 +48,19 @@ button::-moz-focus-inner {
 
 section {
   padding: 80px 0;
+}
+
+.title {
+  text-align: center;
+  font-size: $fz-x;
+  font-weight: 700;
+  letter-spacing: 5.28px;
+  color: $color-primary;
+}
+
+.container {
+  max-width: 1350px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
 }

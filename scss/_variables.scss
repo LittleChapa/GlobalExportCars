@@ -1,9 +1,20 @@
+// Цвета
 $color-primary: #aebbff;
+$color-foreign: #222;
 
-@mixin title {
-  text-align: center;
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: 5.28px;
-  color: $color-primary;
-}
+// Шрифты
+$fz-x: 48px;
+$fz-l: 32px;
+$fz-m: 24px;
+$fz-s: 20px;
+$fz-xs: 18px;
+
+// Максимы
+
+// Медиа
+$xxl: 1600px;
+$xl: 1200px;
+$lg: 960px;
+$md: 768px;
+$sm: 576px;
+$xs: 320px;
