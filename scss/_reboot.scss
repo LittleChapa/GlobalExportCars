@@ -1,24 +1,28 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: $color-foreign;
 }
 
 ul,
 ol {
-  list-style: none;
+    list-style: none;
 }
 
 a,
 a:link,
 a:visited {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 aside,
@@ -27,40 +31,41 @@ footer,
 header,
 section,
 main {
-  display: block;
+    display: block;
 }
 
 input::-ms-clear {
-  display: none;
+    display: none;
 }
 
 input:focus,
 input:active,
 button:focus,
 button:active {
-  outline: none;
+    outline: none;
 }
 
 button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+    padding: 0;
+    border: 0;
 }
 
 section {
-  padding: 80px 0;
+    padding: 80px 0;
 }
 
 .title {
-  text-align: center;
-  font-size: $fz-x;
-  font-weight: 700;
-  letter-spacing: 5.28px;
-  color: $color-primary;
+    text-align: center;
+    font-size: $fz-x;
+    font-weight: 700;
+    letter-spacing: 5.28px;
+    color: $color-primary;
+    margin-bottom: 80px;
 }
 
 .container {
-  max-width: 1350px;
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
+    max-width: 1350px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
 }

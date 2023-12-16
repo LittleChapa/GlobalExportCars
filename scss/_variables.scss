@@ -1,6 +1,9 @@
 // Цвета
 $color-primary: #aebbff;
+$color-primary-hover: #c9d1ff;
 $color-foreign: #222;
+$color-white: #fff;
+$color-grey: #353535;
 
 // Шрифты
 $fz-x: 48px;
@@ -10,6 +13,9 @@ $fz-s: 20px;
 $fz-xs: 18px;
 
 // Максимы
+@mixin button-hovering {
+    background-color: $color-primary-hover;
+}
 
 // Медиа
 $xxl: 1600px;
