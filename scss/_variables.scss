@@ -1,0 +1,9 @@
+$color-primary: #aebbff;
+
+@mixin title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 5.28px;
+  color: $color-primary;
+}
