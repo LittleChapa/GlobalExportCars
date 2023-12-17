@@ -8,24 +8,6 @@
     letter-spacing: 2.6px;
   }
 
-  .button {
-    width: fit-content;
-    display: block;
-    background: $color-primary;
-    color: $color-foreign;
-    margin: 130px auto 0 auto;
-    padding: 20px 40px;
-    border: none;
-    font-size: $fz-m;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-      background: $color-primary-hover;
-    }
-  }
-
   &__line {
     display: block;
     width: 520px;
