@@ -1,9 +1,11 @@
 // подключение шрифта
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 // настройки стилей
-@import './reboot';
-@import './variables';
+@import "./variables";
+@import "./reboot";
 
 // секции
-@import './sections/main';
+@import "./sections/main";
+@import "./sections/advantages";
+@import "./sections/services";

@@ -2,8 +2,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
+}
+
+body {
+  background-color: $color-foreign;
 }
 
 ul,
@@ -56,6 +60,7 @@ section {
   font-weight: 700;
   letter-spacing: 5.28px;
   color: $color-primary;
+  margin-bottom: 80px;
 }
 
 .container {
