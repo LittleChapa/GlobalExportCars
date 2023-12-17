@@ -153,26 +153,68 @@
     </section>
     <section class="catalog">
       <div class="container">
-        <div class="catalog__inner">
-          <h2 class="title">Каталог автомобилей</h2>
-          <div class="catalog__list" id="dropdown-list-button">
-            <span class="catalog__list-selected" id="dropdown-list-selected">США</span>
-            <ul class="catalog__list-select" id="dropdown-list">
-              <li class="catalog__list-item" id="dropdown-list-item">США</li>
-              <li class="catalog__list-item" id="dropdown-list-item">Европа</li>
-              <li class="catalog__list-item" id="dropdown-list-item">Корея</li>
-              <li class="catalog__list-item" id="dropdown-list-item">Китай</li>
-            </ul>
-            <div class="catalog__list-arrow">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
-                <path
-                  d="M1 1.5L8 7.5L15 1.5"
-                  stroke="#AEBBFF"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+        <h2 class="title">Каталог автомобилей</h2>
+        <div class="catalog__list">
+          <span class="catalog__list-selected">США</span>
+          <ul class="catalog__list-select">
+            <li class="catalog__list-item catalog__list-item_selected">США</li>
+            <li class="catalog__list-item">Европа</li>
+            <li class="catalog__list-item">Корея</li>
+            <li class="catalog__list-item">Китай</li>
+          </ul>
+          <div class="catalog__list-arrow" id="dropdown-list-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
+              <path
+                d="M1 1.5L8 7.5L15 1.5"
+                stroke="#AEBBFF"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="catalog__content">
+          <div class="catalog__content-card">
+            <div class="catalog__content-card-img">
+              <img src="./images/catalog_img1.jpg" alt="" />
+            </div>
+            <div class="catalog__content-card-about">
+              <h2 class="catalog__content-card-title">BMW X7</h2>
+              <span class="catalog__content-card-year">2021</span>
+              <p class="catalog__content-card-descr">
+                <span class="catalog__content-card-descr_primary">2.0</span> л /
+                <span class="catalog__content-card-descr_primary">150</span> л.с. / бензин
+              </p>
+              <p class="catalog__content-card-drive">Передний привод</p>
+            </div>
+          </div>
+          <div class="catalog__content-card">
+            <div class="catalog__content-card-img">
+              <img src="./images/catalog_img.jpg" alt="" />
+            </div>
+            <div class="catalog__content-card-about">
+              <h2 class="catalog__content-card-title">BMW X7</h2>
+              <span class="catalog__content-card-year">2021</span>
+              <p class="catalog__content-card-descr">
+                <span class="catalog__content-card-descr_primary">2.0</span> л /
+                <span class="catalog__content-card-descr_primary">150</span> л.с. / бензин
+              </p>
+              <p class="catalog__content-card-drive">Передний привод</p>
+            </div>
+          </div>
+          <div class="catalog__content-card">
+            <div class="catalog__content-card-img">
+              <img src="./images/catalog_img.jpg" alt="" />
+            </div>
+            <div class="catalog__content-card-about">
+              <h2 class="catalog__content-card-title">BMW X7</h2>
+              <span class="catalog__content-card-year">2021</span>
+              <p class="catalog__content-card-descr">
+                <span class="catalog__content-card-descr_primary">2.0</span> л /
+                <span class="catalog__content-card-descr_primary">150</span> л.с. / бензин
+              </p>
+              <p class="catalog__content-card-drive">Передний привод</p>
             </div>
           </div>
         </div>
@@ -181,5 +223,5 @@
   </body>
   <script src="scripts/burger.js"></script>
   <script src="scripts/scroll.js"></script>
-  <script src="scripts/dropdown-list.js"></script>
+  <script src="scripts/dropDownList.js"></script>
 </html>

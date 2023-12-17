@@ -5,7 +5,8 @@
   &__list {
     position: relative;
     width: 150px;
-    padding: 5px 50px 5px 5px;
+    padding: 10px 15px;
+    margin-bottom: 30px;
     display: inline-block;
     color: $color-white;
     background-color: $color-grey;
@@ -21,11 +22,16 @@
       color: $color-white;
       background-color: $color-grey;
       font-size: $fz-xs;
+      opacity: 0;
+      transition: 0.3s;
+      &_active {
+        opacity: 1;
+      }
     }
 
     &-item {
       width: 100%;
-      padding: 5px;
+      padding: 10px 15px;
       cursor: pointer;
       &:hover {
         background-color: #111;
@@ -38,11 +44,74 @@
     &-arrow {
       position: absolute;
       top: 50%;
-      right: 5px;
+      right: 15px;
       transform: translateY(-50%);
       pointer-events: none;
+      transition: 0.3s;
+      &_active {
+        transform: translateY(-50%) rotateX(180deg);
+      }
+
       svg {
         display: block;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 400px));
+    justify-content: space-between;
+    grid-column-gap: 15px;
+    &-card {
+      background-color: $color-grey;
+      width: 100%;
+      padding-bottom: 20px;
+      &-img {
+        height: 330px;
+        overflow: hidden;
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      &-about {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+        padding: 0 20px;
+        margin: 10px 0 0 0;
+        * {
+          letter-spacing: 0.1em;
+          color: $color-white;
+          font-size: $fz-xs;
+          font-weight: 700;
+        }
+      }
+
+      &-title {
+        color: $color-primary;
+        font-size: $fz-l;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        margin-bottom: 5px;
+      }
+
+      &-year {
+      }
+
+      &-descr {
+        &_primary {
+          color: $color-primary;
+        }
+      }
+
+      &-drive {
       }
     }
   }
