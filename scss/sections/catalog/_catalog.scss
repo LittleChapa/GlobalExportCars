@@ -60,7 +60,7 @@
 
   &__content {
     display: grid;
-    grid-template-columns: repeat(3, minmax(auto, 400px));
+    grid-template-columns: repeat(4, minmax(auto, 300px));
     justify-content: space-between;
     grid-column-gap: 15px;
     &-card {
@@ -68,7 +68,7 @@
       width: 100%;
       padding-bottom: 20px;
       &-img {
-        height: 330px;
+        height: 250px;
         overflow: hidden;
         img {
           display: block;
