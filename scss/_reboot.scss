@@ -10,6 +10,10 @@ body {
   background-color: $color-foreign;
 }
 
+.noscroll {
+  overflow: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -45,8 +49,21 @@ input::-ms-clear {
 input:focus,
 input:active,
 button:focus,
-button:active {
+button:active,
+select:focus,
+select:active {
   outline: none;
+}
+
+select {
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  &::-ms-expand {
+    display: none;
+  }
 }
 
 button::-moz-focus-inner {

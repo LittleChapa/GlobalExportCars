@@ -1,7 +1,7 @@
 .main {
   height: 100vh;
   background-blend-mode: multiply;
-  background: url('../../images/main_bg.jpg') rgba(0, 0, 0, 0.4) no-repeat center top / cover;
+  background: url('../images/main_bg.jpg') rgba(0, 0, 0, 0.4) no-repeat center top / cover;
   padding: 0;
 
   &__inner {
@@ -16,6 +16,7 @@
     color: $color-white;
     font-size: $fz-l;
     font-weight: 700;
+    text-align: center;
   }
 
   &__title {
