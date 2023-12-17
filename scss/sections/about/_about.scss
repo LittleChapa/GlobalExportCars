@@ -1,0 +1,67 @@
+.about {
+  &__text {
+    font-size: $fz-m;
+    color: $color-white;
+    text-align: center;
+    line-height: 162%;
+    font-weight: 400;
+    letter-spacing: 2.6px;
+  }
+
+  .button {
+    width: fit-content;
+    display: block;
+    background: $color-primary;
+    color: $color-foreign;
+    margin: 130px auto 0 auto;
+    padding: 20px 40px;
+    border: none;
+    font-size: $fz-m;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $color-primary-hover;
+    }
+  }
+
+  &__line {
+    display: block;
+    width: 520px;
+    height: 1px;
+    background: $color-white;
+    margin: 80px auto;
+  }
+
+  &__content {
+    margin-bottom: 75px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &-titleCountry {
+      display: block;
+      margin-bottom: 20px;
+      color: $color-primary;
+      font-size: $fz-l;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+
+      & > svg {
+        display: block;
+        height: 42px;
+        margin-right: 20px;
+      }
+    }
+
+    &-text {
+      color: $color-white;
+      font-size: $fz-m;
+      line-height: 162%;
+      font-weight: 400;
+    }
+  }
+}
