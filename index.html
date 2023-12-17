@@ -73,11 +73,11 @@
     <section class="about">
       <div class="container">
         <h2 class="title">О нас</h2>
-        <div class="about__text">
+        <p class="about__text">
           AutopodbeRU - это экономия вашего времени и нервов. Мы быстро и четко решаем задачи наших клиентов, связанные
           с покупкой, таможней и перегоном автомобилей. Компания проводит подробную аналитику авторынков США, России и
           Грузии, чтобы находить лучшие варианты для наших клиентов под любой запрос и бюджет.
-        </div>
+        </p>
         <a class="button">Отправить заявку</a>
         <i class="about__line"></i>
         <div class="about__content">
@@ -151,7 +151,35 @@
         </div>
       </div>
     </section>
+    <section class="catalog">
+      <div class="container">
+        <div class="catalog__inner">
+          <h2 class="title">Каталог автомобилей</h2>
+          <div class="catalog__list" id="dropdown-list-button">
+            <span class="catalog__list-selected" id="dropdown-list-selected">США</span>
+            <ul class="catalog__list-select" id="dropdown-list">
+              <li class="catalog__list-item" id="dropdown-list-item">США</li>
+              <li class="catalog__list-item" id="dropdown-list-item">Европа</li>
+              <li class="catalog__list-item" id="dropdown-list-item">Корея</li>
+              <li class="catalog__list-item" id="dropdown-list-item">Китай</li>
+            </ul>
+            <div class="catalog__list-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
+                <path
+                  d="M1 1.5L8 7.5L15 1.5"
+                  stroke="#AEBBFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
   <script src="scripts/burger.js"></script>
   <script src="scripts/scroll.js"></script>
+  <script src="scripts/dropdown-list.js"></script>
 </html>
