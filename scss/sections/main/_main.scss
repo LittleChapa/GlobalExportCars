@@ -3,13 +3,14 @@
   background-blend-mode: multiply;
   background: url('../images/main_bg.jpg') rgba(0, 0, 0, 0.4) no-repeat center top / cover;
   padding: 0;
-
+  transition: height 0.3s;
   &__inner {
     height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: height 0.3s;
   }
 
   &__company {
