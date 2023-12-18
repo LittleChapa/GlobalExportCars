@@ -1,5 +1,9 @@
 @media (max-width: $sm) {
   .main {
+    &__title {
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
     &__subtitle {
       font-size: $fz-s;
     }

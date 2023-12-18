@@ -1,0 +1,61 @@
+@media (max-width: $xl) {
+  .services {
+    &__wrapper {
+      row-gap: 20px;
+    }
+
+    &__card {
+      padding: 35px 15px;
+      gap: 30px;
+
+      &-descr {
+        line-height: 1.5em;
+        font-size: $fz-xxs;
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .services {
+    &__wrapper {
+      grid-template-columns: repeat(2, minmax(auto, 100%));
+    }
+
+    &__card {
+      &-descr {
+        font-size: $fz-xs;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .services {
+    &__wrapper {
+      grid-template-columns: repeat(1, minmax(auto, 100%));
+    }
+
+    &__card {
+      padding: 35px 50px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .services {
+    &__card {
+      padding: 35px 25px;
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .services {
+    &__card {
+      &-descr {
+        font-size: $fz-xxs;
+      }
+    }
+  }
+}

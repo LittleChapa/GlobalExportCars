@@ -1,0 +1,79 @@
+@media (max-width: $xl) {
+  .advantages {
+    &__card {
+      padding: 30px;
+      &-img {
+        height: 100px;
+      }
+
+      &-title {
+        font-size: $fz-m;
+      }
+
+      &-descr {
+        font-size: $fz-xxs;
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .advantages {
+    &__card {
+      padding: 10px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .advantages {
+    &__wrapper {
+      grid-template-columns: repeat(1, minmax(auto, 100%));
+      row-gap: 50px;
+    }
+
+    &__card {
+      padding: 0;
+      gap: 15px;
+      &-img {
+        height: 130px;
+      }
+
+      &-title {
+        font-size: $fz-l;
+      }
+
+      &-descr {
+        font-size: $fz-xs;
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .advantages {
+    &__card {
+      &-img {
+        height: 100px;
+      }
+
+      &-title {
+        font-size: $fz-m;
+      }
+
+      &-descr {
+        font-size: $fz-xxs;
+      }
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .advantages {
+    .advantages {
+      &__wrapper {
+        row-gap: 30px;
+      }
+    }
+  }
+}

@@ -6,7 +6,6 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(auto, 400px));
     justify-content: space-between;
-    column-gap: 20px;
   }
 
   &__card {
@@ -33,7 +32,8 @@
       font-size: $fz-l;
       color: $color-primary;
       font-weight: 700;
-      letter-spacing: 3.52px;
+      letter-spacing: 0.1em;
+      text-align: center;
     }
 
     &-descr {
@@ -42,7 +42,7 @@
       font-size: $fz-xs;
       font-weight: 500;
       line-height: 160%;
-      letter-spacing: 1.62px;
+      letter-spacing: 0.1em;
     }
   }
 }
