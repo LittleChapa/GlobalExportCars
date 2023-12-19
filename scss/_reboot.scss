@@ -58,7 +58,8 @@ textarea:focus-visible {
   outline: none;
 }
 
-select {
+select,
+input {
   border: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
