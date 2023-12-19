@@ -1,0 +1,33 @@
+@media (max-width: $sm) {
+  .feedback {
+    &__form {
+      gap: 20px;
+      &-item {
+        &-title {
+          font-size: $fz-xxs;
+        }
+
+        &-input {
+          font-size: $fz-xxs;
+          padding: 12px;
+
+          &-text {
+            height: 230px;
+          }
+        }
+      }
+
+      &-list {
+        font-size: $fz-xxs;
+        &-item {
+          font-size: $fz-xxs;
+          padding: 12px;
+        }
+      }
+    }
+
+    &__subtitle {
+      font-size: $fz-xxs;
+    }
+  }
+}

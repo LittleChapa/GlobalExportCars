@@ -28,10 +28,10 @@
         font-size: $fz-xs;
         line-height: 1.5em;
         opacity: 0;
+        box-sizing: content-box;
         transition: 0.4s;
         &_active {
           padding-top: 30px;
-          margin-bottom: 30px;
           opacity: 1;
           transition: 0.4s, opacity 0.4s 0.1s;
         }

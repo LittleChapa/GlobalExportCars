@@ -17,15 +17,16 @@
       position: absolute;
       top: calc(100% + 5px);
       left: 0;
-      width: inherit;
+      width: 100%;
       display: inline-block;
-      color: $color-white;
       background-color: $color-grey;
       font-size: $fz-xs;
       opacity: 0;
-      transition: 0.3s;
+      pointer-events: none;
+      transition: opacity 0.3s;
       &_active {
         opacity: 1;
+        pointer-events: auto;
       }
     }
 

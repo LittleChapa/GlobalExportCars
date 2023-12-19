@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
@@ -48,10 +49,12 @@ input::-ms-clear {
 
 input:focus,
 input:active,
+input:focus-visible,
 button:focus,
 button:active,
 select:focus,
-select:active {
+select:active,
+textarea:focus-visible {
   outline: none;
 }
 
@@ -66,6 +69,7 @@ select {
   }
 }
 
+button,
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -73,6 +77,9 @@ button::-moz-focus-inner {
 
 section {
   padding: 80px 0;
+  @media (max-width: $sm) {
+    padding: 40px 0;
+  }
 }
 
 .container {
