@@ -1,0 +1,15 @@
+@media (max-width: $sm) {
+  .faq {
+    &__content {
+      &-item {
+        &-title {
+          font-size: $fz-s;
+        }
+        &-text {
+          font-size: $fz-xxs;
+          line-height: 1.7em;
+        }
+      }
+    }
+  }
+}
