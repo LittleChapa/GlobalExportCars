@@ -9,7 +9,12 @@
 
 @media (max-width: $md) {
   .button {
+    margin: 60px auto 0 auto;
+    &_mt30 {
+      margin-top: 30px;
+    }
     &_small {
+      margin: 0;
       font-size: $fz-l;
     }
   }
