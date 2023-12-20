@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,5 +7,22 @@
         <link rel="stylesheet" href="../styles/index.css?v=*" />
         <link rel="icon" href="../images/logo.png" />
     </head>
-    <body></body>
+    <body>
+        <section class="login">
+            <div class="container">
+                <h2 class="title">Вход</h2>
+                <form class="feedback__form" action="../admin/panel.html" method="get">
+                    <label class="feedback__form-item" for="">
+                        <h3 class="feedback__form-item-title">Почта</h3>
+                        <input class="feedback__form-item-input" type="email" placeholder="Введите почту..." />
+                    </label>
+                    <label class="feedback__form-item" for="">
+                        <h3 class="feedback__form-item-title">Пароль</h3>
+                        <input class="feedback__form-item-input" type="password" placeholder="Введите пароль..." />
+                    </label>
+                    <button class="button button_mt30" type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </section>
+    </body>
 </html>
