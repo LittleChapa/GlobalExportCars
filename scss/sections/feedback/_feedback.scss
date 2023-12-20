@@ -91,6 +91,9 @@
 
         svg {
           display: block;
+          path {
+            stroke: $color-primary;
+          }
         }
       }
     }

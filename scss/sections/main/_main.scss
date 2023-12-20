@@ -43,6 +43,9 @@
     svg {
       position: absolute;
       animation: arrowAnimation 1.2s infinite;
+      path {
+        stroke: $color-primary;
+      }
     }
   }
 }

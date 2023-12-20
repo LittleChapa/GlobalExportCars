@@ -1,5 +1,7 @@
 const sections = document.querySelectorAll('section');
 const links = document.querySelectorAll('.header__list-item');
+const button = document.querySelector('#button');
+const feedback = document.querySelector('.feedback');
 const arrayLinks = Array.from(links);
 const arraySections = Array.from(sections);
 const newArraySections = arraySections.filter((item, i) => {
@@ -19,6 +21,10 @@ function anchorLink(element) {
 
   window.scrollTo(0, windowTop + offset.top - 70);
 }
+
+button.addEventListener('click', () => {
+  anchorLink(feedback);
+});
 
 for (let i = 0; i < arrayLinks.length; i++) {
   arrayLinks[i].addEventListener('click', () => {

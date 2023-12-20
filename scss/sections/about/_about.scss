@@ -23,19 +23,27 @@
       margin: 0;
     }
 
-    &-titleCountry {
+    &-item {
       display: block;
       margin-bottom: 20px;
-      color: $color-primary;
-      font-size: $fz-l;
-      font-weight: 400;
       display: flex;
       align-items: center;
+      &-img {
+        svg {
+          display: block;
+          width: auto;
+          height: 42px;
+          margin-right: 20px;
+          path {
+            fill: $color-primary;
+          }
+        }
+      }
 
-      & > svg {
-        display: block;
-        height: 42px;
-        margin-right: 20px;
+      &-title {
+        color: $color-primary;
+        font-size: $fz-l;
+        font-weight: 400;
       }
     }
 

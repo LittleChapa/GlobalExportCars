@@ -12,12 +12,15 @@
 
     &__content {
       margin-bottom: 35px;
-      &-titleCountry {
-        font-size: 22px;
-        margin-bottom: 15px;
-        & > svg {
-          height: 32px;
-          margin-right: 10px;
+      &-item {
+        &-img {
+          & > svg {
+            height: 32px;
+            margin-right: 10px;
+          }
+        }
+        &-title {
+          font-size: 22px;
         }
       }
 
