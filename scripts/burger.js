@@ -11,10 +11,9 @@ listItems.forEach((item) => {
   onBurger(item);
 });
 onBurger(burger);
-
 function onBurger(element) {
   element.addEventListener('click', () => {
-    if (element == logo && !burger.classList.contains('header__burger_active')) {
+    if ((element == logo && !burger.classList.contains('header__burger_active')) || window.innerWidth > 768) {
       return;
     }
     burger.classList.toggle('header__burger_active');

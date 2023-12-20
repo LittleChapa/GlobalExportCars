@@ -1,0 +1,10 @@
+@media (max-width: $sm) {
+  .panel {
+    &__list {
+      grid-template-columns: 1fr;
+      &-item {
+        padding: 20px;
+      }
+    }
+  }
+}

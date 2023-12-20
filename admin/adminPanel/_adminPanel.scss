@@ -1,0 +1,30 @@
+.panel {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+
+    &-item {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $color-primary;
+      padding: 30px;
+      transition: 0.3s;
+      color: $color-foreign;
+      font-size: $fz-xs;
+      font-weight: 600;
+      border-radius: 8px;
+
+      &:hover {
+        @include button-hovering;
+      }
+    }
+  }
+}
