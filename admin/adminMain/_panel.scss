@@ -1,0 +1,45 @@
+.panel {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+
+        &-item {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $color-primary;
+            width: calc(100% / 8);
+            padding: 30px;
+            transition: 0.3s;
+            color: $color-foreign;
+            font-size: $fz-xs;
+            font-weight: 600;
+            border-radius: 8px;
+
+            @media (max-width: 1280px) {
+                width: 25%;
+            }
+
+            @media (max-width: $md) {
+                width: 30%;
+            }
+
+            @media (max-width: 600px) {
+                width: 100%;
+                padding: 20px;
+            }
+
+            &:hover {
+                @include button-hovering;
+            }
+        }
+    }
+}
