@@ -14,6 +14,9 @@ onBurger(burger);
 
 function onBurger(element) {
   element.addEventListener('click', () => {
+    if (element == logo && !burger.classList.contains('header__burger_active')) {
+      return;
+    }
     burger.classList.toggle('header__burger_active');
     list.classList.toggle('header__list_active');
     document.body.classList.toggle('noscroll');
