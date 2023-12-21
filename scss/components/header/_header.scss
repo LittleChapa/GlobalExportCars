@@ -94,7 +94,8 @@
       font-size: $fz-s;
       font-weight: 700;
       transition: 0.3s;
-      &:hover {
+      &:hover,
+      &_active {
         color: $color-primary;
       }
 

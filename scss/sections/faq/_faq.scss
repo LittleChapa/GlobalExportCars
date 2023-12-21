@@ -44,20 +44,19 @@
         padding: 7px;
         border-radius: 50%;
         transition: 0.3s;
-        &_active {
-          transform: rotate(225deg);
-          background-color: $color-primary;
-          path {
-            fill: $color-foreign;
-          }
-        }
         svg {
           width: 25px;
           height: 25px;
           display: block;
           path {
             fill: $color-primary;
-            transition: 0.3s;
+          }
+        }
+        &_active {
+          transform: rotate(225deg);
+          background-color: $color-primary;
+          svg path {
+            fill: $color-foreign;
           }
         }
       }
