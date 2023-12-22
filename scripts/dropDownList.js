@@ -29,6 +29,7 @@ function dropDownList(
     });
   });
 }
+
 dropDownList(
   catalogButton,
   catalogDropDownList,

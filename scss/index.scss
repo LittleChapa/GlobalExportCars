@@ -21,7 +21,8 @@
 @import './sections/contacts/contacts';
 
 // админ панель
-@import '../admin/adminPanel/adminPanel';
+@import './admin/adminPanel/adminPanel';
+@import './admin/adminApplications/adminApplications';
 
 // медиа
 @import './media';
