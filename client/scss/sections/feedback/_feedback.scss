@@ -1,0 +1,96 @@
+.feedback {
+  background-color: $color-grey;
+  &__form {
+    max-width: 735px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &-title {
+        color: $color-primary;
+        font-size: $fz-xs;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+      }
+
+      &-text {
+        height: 270px;
+        resize: none;
+      }
+    }
+
+    &-list {
+      position: relative;
+      font-size: $fz-xs;
+      cursor: pointer;
+      &-selected {
+      }
+
+      &-select {
+        position: absolute;
+        z-index: 5;
+        top: calc(100% + 10px);
+        left: 0;
+        width: 100%;
+        display: inline-block;
+        font-size: $fz-xs;
+        background-color: $color-grey;
+        outline: 2px solid $color-primary;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s;
+        &_active {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+
+      &-item {
+        width: 100%;
+        padding: 15px;
+        cursor: pointer;
+        &:hover {
+          color: $color-grey;
+          background-color: $color-primary;
+        }
+        &_selected {
+          color: $color-grey;
+          background-color: $color-primary;
+        }
+      }
+
+      &-arrow {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        transition: 0.3s;
+        &_active {
+          transform: translateY(-50%) rotateX(180deg);
+        }
+
+        svg {
+          display: block;
+          path {
+            stroke: $color-primary;
+          }
+        }
+      }
+    }
+  }
+  &__subtitle {
+    max-width: 700px;
+    margin: 0 auto;
+    color: $color-white;
+    font-size: $fz-xs;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin-top: 40px;
+  }
+}

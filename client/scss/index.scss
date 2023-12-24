@@ -1,0 +1,32 @@
+// подключение шрифта
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+// настройки стилей
+@import './variables';
+@import './reboot';
+
+// компоненты
+@import './components/header/header';
+@import './components/button/button';
+@import './components/title/title';
+@import './components/input/input';
+
+// секции
+@import './sections/main/main';
+@import './sections/about/about';
+@import './sections/advantages/advantages';
+@import './sections/catalog/catalog';
+@import './sections/services/services';
+@import './sections/faq/faq';
+@import './sections/feedback/feedback';
+@import './sections/contacts/contacts';
+
+// админ панель
+@import './admin/adminPanel/adminPanel';
+@import './admin/adminMain/adminMain';
+@import './admin/adminApplications/adminApplications';
+@import './admin/adminAbout/adminAbout';
+@import './admin/adminCatalog/adminCatalog';
+
+// медиа
+@import './media';

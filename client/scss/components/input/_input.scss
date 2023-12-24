@@ -1,0 +1,13 @@
+.input {
+  color: $color-white;
+  font-size: $fz-xs;
+  letter-spacing: 0.1em;
+  background-color: transparent;
+  border: 2px solid $color-primary;
+  border-radius: 0;
+  padding: 15px;
+  &::placeholder {
+    color: $color-white;
+    opacity: 0.5;
+  }
+}

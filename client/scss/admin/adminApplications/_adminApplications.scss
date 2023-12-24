@@ -1,0 +1,100 @@
+.admin-applications {
+  &__links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, minmax(auto, 400px));
+    column-gap: 15px;
+    row-gap: 50px;
+    counter-reset: myCounter;
+    &-item {
+      position: relative;
+      background-color: $color-grey;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 15px;
+      cursor: pointer;
+      &:before {
+        counter-increment: myCounter;
+        content: counter(myCounter);
+        position: absolute;
+        left: 5px;
+        top: -25px;
+        color: $color-white;
+      }
+      &_disabled {
+        pointer-events: none;
+      }
+      &-text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        pointer-events: none;
+        cursor: default;
+        &-button {
+          width: 100%;
+          padding: 10px;
+          margin: 0;
+          &_active {
+            pointer-events: auto;
+          }
+        }
+      }
+
+      &-title {
+        color: $color-white;
+        font-size: $fz-s;
+        font-weight: 400;
+        span {
+          word-wrap: break-word;
+        }
+      }
+
+      &-icon {
+        transition: 0.3s;
+        &_active {
+          transform: rotateX(180deg);
+        }
+        svg {
+          path {
+            stroke: $color-primary;
+          }
+        }
+      }
+    }
+    &-inner {
+      position: absolute;
+      z-index: 5;
+      left: 0px;
+      top: calc(100% + 5px);
+      background-color: $color-grey;
+      border: 1px solid $color-primary;
+      width: 100%;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+      &_active {
+        opacity: 1;
+      }
+      &-item {
+      }
+      &-line {
+        width: 100%;
+        height: 2px;
+        background-color: $color-white;
+        margin: 10px 0;
+      }
+    }
+  }
+}

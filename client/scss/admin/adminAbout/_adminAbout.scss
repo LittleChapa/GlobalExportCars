@@ -1,0 +1,74 @@
+.admin-about {
+  &__list {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, minmax(auto, 635px));
+    column-gap: 15px;
+    row-gap: 50px;
+    counter-reset: myCounter;
+    &-item {
+      position: relative;
+      background-color: $color-grey;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 15px;
+      &:before {
+        counter-increment: myCounter;
+        content: counter(myCounter);
+        position: absolute;
+        left: 5px;
+        top: -25px;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    &-item {
+      display: block;
+      width: 100%;
+      &-title {
+        color: $color-primary;
+        font-size: $fz-xs;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        margin-bottom: 5px;
+      }
+
+      &-input {
+        font-size: $fz-xxs;
+        display: block;
+        width: 100%;
+        &-text {
+          height: 200px;
+          resize: none;
+        }
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+
+      &-item {
+        margin: 0;
+        padding: 12px 0;
+        width: 100%;
+        &_red-bg {
+          background-color: #ff6464;
+          &:hover {
+            background-color: #ff7575;
+          }
+        }
+      }
+    }
+  }
+}
