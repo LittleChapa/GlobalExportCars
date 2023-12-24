@@ -9,6 +9,7 @@
 @import './components/header/header';
 @import './components/button/button';
 @import './components/title/title';
+@import './components/input/input';
 
 // секции
 @import './sections/main/main';
@@ -22,7 +23,10 @@
 
 // админ панель
 @import './admin/adminPanel/adminPanel';
+@import './admin/adminMain/adminMain';
 @import './admin/adminApplications/adminApplications';
+@import './admin/adminAbout/adminAbout';
+@import './admin/adminCatalog/adminCatalog';
 
 // медиа
 @import './media';

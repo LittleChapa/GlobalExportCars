@@ -4,15 +4,23 @@ const button = document.querySelector('#button');
 const feedback = document.querySelector('.feedback');
 const arrayLinks = Array.from(links);
 const arraySections = Array.from(sections);
+const logo = document.querySelector('.header__list-link-logo');
+
 const newArraySections = arraySections.filter((item, i) => {
   return i !== 2;
 });
-arrayLinks.unshift(logo);
+
+if (window.innerWidth <= 768) {
+  arrayLinks.unshift(logoMobile);
+} else {
+  arrayLinks.unshift(logo);
+}
 
 if (arrayLinks.length >= 2) {
   let temp = arrayLinks[arrayLinks.length - 1];
   arrayLinks[arrayLinks.length - 1] = arrayLinks[arrayLinks.length - 2];
   arrayLinks[arrayLinks.length - 2] = temp;
+  console.log(arrayLinks);
 }
 
 function anchorLink(element) {

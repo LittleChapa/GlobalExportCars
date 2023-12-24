@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Админ панель - Главная</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="icon" href="../images/logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <section class="admin-about">
+      <div class="container">
+        <a href="./adminPanel.html" class="admin-link">Назад</a>
+        <h2 class="title">О нас</h2>
+        <ul class="admin-about__list">
+          <li class="admin-about__list-item">
+            <form action="" class="admin-about__form">
+              <label for="" class="admin-about__form-item">
+                <h3 class="admin-about__form-item-title">Заголовок</h3>
+                <input type="text" value="Какую услугу выбрать?" class="input admin-about__form-item-input" />
+              </label>
+              <label for="" class="admin-about__form-item">
+                <h3 class="admin-about__form-item-title">Текст</h3>
+                <textarea name="" id="" class="input admin-about__form-item-input admin-about__form-item-input-text">
+Наша команда предоставляет пакеты услуг под разные задачи и бюджет. При приобретении пакета “Под ключ”, мы решим все вопросы без Вашего физического присутствия. Вы получите автомобиль в Вашем городе, готовый к постановке на учет в ГАИ. Если вы хотите осмотреть автомобиль перед покупкой лично, Вам подойдет пакет “Оптимальный”. Мы встретим Вас в Грузии, будем сопровождать на авторынке Рустави и проведем подбор при Вас. После покупки автомобиль отправится на таможню и будет находиться там 1-2 дня. Вы сможете забрать авто из нашего офиса на авторынке Рустави. Пакет "Подбор-безлимит" подойдет вам, если вы не можете самостоятельно выбрать и осмотреть автомобиль в Грузии. Поможем подобрать, осмотрим и сделаем все необходимые проверки за вас. Таможенное оформление и логистика в данную услугу не входят.</textarea
+                >
+              </label>
+              <div class="admin-about__form-buttons">
+                <button class="button admin-about__form-buttons-item">Сохранить</button>
+                <button class="button admin-about__form-buttons-item admin-about__form-buttons-item_red-bg">
+                  Удалить
+                </button>
+              </div>
+            </form>
+          </li>
+          <li class="admin-about__list-item">
+            <form action="" class="admin-about__form">
+              <label for="" class="admin-about__form-item">
+                <h3 class="admin-about__form-item-title">Заголовок</h3>
+                <input
+                  type="text"
+                  value="Какие автомобили можно заказать в РФ?"
+                  class="input admin-about__form-item-input"
+                />
+              </label>
+              <label for="" class="admin-about__form-item">
+                <h3 class="admin-about__form-item-title">Текст</h3>
+                <textarea name="" id="" class="input admin-about__form-item-input admin-about__form-item-input-text">
+Мы предлагаем большой выбор автомобилей: от новых автомобилей без пробега до б/у после 2017 года выпуска включительно.</textarea
+                >
+              </label>
+              <div class="admin-about__form-buttons">
+                <button class="button admin-about__form-buttons-item">Сохранить</button>
+                <button class="button admin-about__form-buttons-item admin-about__form-buttons-item_red-bg">
+                  Удалить
+                </button>
+              </div>
+            </form>
+          </li>
+          <li class="admin-about__list-item">
+            <form action="" class="admin-about__form">
+              <label for="" class="admin-about__form-item">
+                <h3 class="admin-about__form-item-title">Заголовок</h3>
+                <input
+                  type="text"
+                  value="Как происходит таможенное оформление?"
+                  class="input admin-about__form-item-input"
+                />
+              </label>
+              <label for="" class="admin-about__form-item">
+                <h3 class="admin-about__form-item-title">Текст</h3>
+                <textarea name="" id="" class="input admin-about__form-item-input admin-about__form-item-input-text">
+Мы проводим таможенное оформление через Киргизию, Армению и Казахстан. Способ оформления для каждого автомобиля подбирается индивидуально, для извлечения максимальной выгоды. Срок прохождения таможни 1-2 дня. Перегнать автомобиль для таможни помогут наши перегонщики, или Вы можете воспользоваться нашей услугой “Перегон на эвакуаторе”.</textarea
+                >
+              </label>
+              <div class="admin-about__form-buttons">
+                <button class="button admin-about__form-buttons-item">Сохранить</button>
+                <button class="button admin-about__form-buttons-item admin-about__form-buttons-item_red-bg">
+                  Удалить
+                </button>
+              </div>
+            </form>
+          </li>
+          <li class="admin-about__list-item">
+            <form action="" class="admin-about__form">
+              <label for="" class="admin-about__form-item">
+                <h3 class="admin-about__form-item-title">Заголовок</h3>
+                <input type="text" value="Как происходит оплата?" class="input admin-about__form-item-input" />
+              </label>
+              <label for="" class="admin-about__form-item">
+                <h3 class="admin-about__form-item-title">Текст</h3>
+                <textarea name="" id="" class="input admin-about__form-item-input admin-about__form-item-input-text">
+Вы можете выбрать любой удобный вам способ оплаты:
+
+• оплата наличными в офисе в Москве
+• оплата наличными в офисе в Грузии
+• перевод USDT
+• перевод через банковский Invoice
+• перевод на карту российского банка
+• перевод на карту грузинского банка</textarea
+                >
+              </label>
+              <div class="admin-about__form-buttons">
+                <button class="button admin-about__form-buttons-item">Сохранить</button>
+                <button class="button admin-about__form-buttons-item admin-about__form-buttons-item_red-bg">
+                  Удалить
+                </button>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

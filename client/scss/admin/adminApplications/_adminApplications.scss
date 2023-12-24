@@ -1,6 +1,12 @@
-.applications {
+.admin-applications {
+  &__links {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__list {
     display: grid;
+    justify-content: space-between;
     grid-template-columns: repeat(3, minmax(auto, 400px));
     column-gap: 15px;
     row-gap: 50px;

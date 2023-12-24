@@ -10,33 +10,37 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <section class="applications">
+    <section class="admin-applications">
       <div class="container">
+        <div class="admin-applications__links">
+          <a href="./adminPanel.html" class="admin-link">Назад</a>
+          <a href="./adminApplicationsArchive.html" class="admin-link">Архив</a>
+        </div>
         <h2 class="title">Заявки</h2>
-        <ol class="applications__list">
-          <li class="applications__list-item">
-            <form class="applications__list-item-text" action="">
-              <p class="applications__list-item-title">Имя: <span id="name"></span></p>
-              <p class="applications__list-item-title">Услуга: <span id="service"></span></p>
-              <ul class="applications__list applications__list-inner">
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
+        <ol class="admin-applications__list">
+          <li class="admin-applications__list-item">
+            <form class="admin-applications__list-item-text" action="">
+              <p class="admin-applications__list-item-title">Имя: <span id="name"></span></p>
+              <p class="admin-applications__list-item-title">Услуга: <span id="service"></span></p>
+              <ul class="admin-applications__list admin-applications__list-inner">
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Почта: <span id="email"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Почта: <span id="email"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
                 </li>
-                <hr class="applications__list-inner-line" />
-                <li class="applications__list-inner-item">
-                  <button class="button applications__list-item-text-button" type="submit">
-                    Перенести заявку в архив
+                <hr class="admin-applications__list-inner-line" />
+                <li class="admin-applications__list-inner-item">
+                  <button class="button admin-applications__list-item-text-button" type="submit">
+                    Перенести в архив
                   </button>
                 </li>
               </ul>
             </form>
-            <div class="applications__list-item-icon" id="applications-dropdown-list-arrow">
+            <div class="admin-applications__list-item-icon" id="admin-applications-dropdown-list-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
                 <path
                   d="M1 1.5L8 7.5L15 1.5"
@@ -48,29 +52,29 @@
               </svg>
             </div>
           </li>
-          <li class="applications__list-item">
-            <form class="applications__list-item-text" action="">
-              <p class="applications__list-item-title">Имя: <span id="name"></span></p>
-              <p class="applications__list-item-title">Услуга: <span id="service"></span></p>
-              <ul class="applications__list applications__list-inner">
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
+          <li class="admin-applications__list-item">
+            <form class="admin-applications__list-item-text" action="">
+              <p class="admin-applications__list-item-title">Имя: <span id="name"></span></p>
+              <p class="admin-applications__list-item-title">Услуга: <span id="service"></span></p>
+              <ul class="admin-applications__list admin-applications__list-inner">
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Почта: <span id="email"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Почта: <span id="email"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
                 </li>
-                <hr class="applications__list-inner-line" />
-                <li class="applications__list-inner-item">
-                  <button class="button applications__list-item-text-button" type="submit">
-                    Перенести заявку в архив
+                <hr class="admin-applications__list-inner-line" />
+                <li class="admin-applications__list-inner-item">
+                  <button class="button admin-applications__list-item-text-button" type="submit">
+                    Перенести в архив
                   </button>
                 </li>
               </ul>
             </form>
-            <div class="applications__list-item-icon" id="applications-dropdown-list-arrow">
+            <div class="admin-applications__list-item-icon" id="admin-applications-dropdown-list-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
                 <path
                   d="M1 1.5L8 7.5L15 1.5"
@@ -82,29 +86,29 @@
               </svg>
             </div>
           </li>
-          <li class="applications__list-item">
-            <form class="applications__list-item-text" action="">
-              <p class="applications__list-item-title">Имя: <span id="name"></span></p>
-              <p class="applications__list-item-title">Услуга: <span id="service"></span></p>
-              <ul class="applications__list applications__list-inner">
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
+          <li class="admin-applications__list-item">
+            <form class="admin-applications__list-item-text" action="">
+              <p class="admin-applications__list-item-title">Имя: <span id="name"></span></p>
+              <p class="admin-applications__list-item-title">Услуга: <span id="service"></span></p>
+              <ul class="admin-applications__list admin-applications__list-inner">
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Почта: <span id="email"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Почта: <span id="email"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
                 </li>
-                <hr class="applications__list-inner-line" />
-                <li class="applications__list-inner-item">
-                  <button class="button applications__list-item-text-button" type="submit">
-                    Перенести заявку в архив
+                <hr class="admin-applications__list-inner-line" />
+                <li class="admin-applications__list-inner-item">
+                  <button class="button admin-applications__list-item-text-button" type="submit">
+                    Перенести в архив
                   </button>
                 </li>
               </ul>
             </form>
-            <div class="applications__list-item-icon" id="applications-dropdown-list-arrow">
+            <div class="admin-applications__list-item-icon" id="admin-applications-dropdown-list-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
                 <path
                   d="M1 1.5L8 7.5L15 1.5"
@@ -116,29 +120,29 @@
               </svg>
             </div>
           </li>
-          <li class="applications__list-item">
-            <form class="applications__list-item-text" action="">
-              <p class="applications__list-item-title">Имя: <span id="name"></span></p>
-              <p class="applications__list-item-title">Услуга: <span id="service"></span></p>
-              <ul class="applications__list applications__list-inner">
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
+          <li class="admin-applications__list-item">
+            <form class="admin-applications__list-item-text" action="">
+              <p class="admin-applications__list-item-title">Имя: <span id="name"></span></p>
+              <p class="admin-applications__list-item-title">Услуга: <span id="service"></span></p>
+              <ul class="admin-applications__list admin-applications__list-inner">
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Почта: <span id="email"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Почта: <span id="email"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
                 </li>
-                <hr class="applications__list-inner-line" />
-                <li class="applications__list-inner-item">
-                  <button class="button applications__list-item-text-button" type="submit">
-                    Перенести заявку в архив
+                <hr class="admin-applications__list-inner-line" />
+                <li class="admin-applications__list-inner-item">
+                  <button class="button admin-applications__list-item-text-button" type="submit">
+                    Перенести в архив
                   </button>
                 </li>
               </ul>
             </form>
-            <div class="applications__list-item-icon" id="applications-dropdown-list-arrow">
+            <div class="admin-applications__list-item-icon" id="admin-applications-dropdown-list-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
                 <path
                   d="M1 1.5L8 7.5L15 1.5"
@@ -150,29 +154,29 @@
               </svg>
             </div>
           </li>
-          <li class="applications__list-item">
-            <form class="applications__list-item-text" action="">
-              <p class="applications__list-item-title">Имя: <span id="name"></span></p>
-              <p class="applications__list-item-title">Услуга: <span id="service"></span></p>
-              <ul class="applications__list applications__list-inner">
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
+          <li class="admin-applications__list-item">
+            <form class="admin-applications__list-item-text" action="">
+              <p class="admin-applications__list-item-title">Имя: <span id="name"></span></p>
+              <p class="admin-applications__list-item-title">Услуга: <span id="service"></span></p>
+              <ul class="admin-applications__list admin-applications__list-inner">
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Почта: <span id="email"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Почта: <span id="email"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
                 </li>
-                <hr class="applications__list-inner-line" />
-                <li class="applications__list-inner-item">
-                  <button class="button applications__list-item-text-button" type="submit">
-                    Перенести заявку в архив
+                <hr class="admin-applications__list-inner-line" />
+                <li class="admin-applications__list-inner-item">
+                  <button class="button admin-applications__list-item-text-button" type="submit">
+                    Перенести в архив
                   </button>
                 </li>
               </ul>
             </form>
-            <div class="applications__list-item-icon" id="applications-dropdown-list-arrow">
+            <div class="admin-applications__list-item-icon" id="admin-applications-dropdown-list-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
                 <path
                   d="M1 1.5L8 7.5L15 1.5"
@@ -184,29 +188,29 @@
               </svg>
             </div>
           </li>
-          <li class="applications__list-item">
-            <form class="applications__list-item-text" action="">
-              <p class="applications__list-item-title">Имя: <span id="name"></span></p>
-              <p class="applications__list-item-title">Услуга: <span id="service"></span></p>
-              <ul class="applications__list applications__list-inner">
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
+          <li class="admin-applications__list-item">
+            <form class="admin-applications__list-item-text" action="">
+              <p class="admin-applications__list-item-title">Имя: <span id="name"></span></p>
+              <p class="admin-applications__list-item-title">Услуга: <span id="service"></span></p>
+              <ul class="admin-applications__list admin-applications__list-inner">
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Почта: <span id="email"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Почта: <span id="email"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
                 </li>
-                <hr class="applications__list-inner-line" />
-                <li class="applications__list-inner-item">
-                  <button class="button applications__list-item-text-button" type="submit">
-                    Перенести заявку в архив
+                <hr class="admin-applications__list-inner-line" />
+                <li class="admin-applications__list-inner-item">
+                  <button class="button admin-applications__list-item-text-button" type="submit">
+                    Перенести в архив
                   </button>
                 </li>
               </ul>
             </form>
-            <div class="applications__list-item-icon" id="applications-dropdown-list-arrow">
+            <div class="admin-applications__list-item-icon" id="admin-applications-dropdown-list-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
                 <path
                   d="M1 1.5L8 7.5L15 1.5"
@@ -218,29 +222,29 @@
               </svg>
             </div>
           </li>
-          <li class="applications__list-item">
-            <form class="applications__list-item-text" action="">
-              <p class="applications__list-item-title">Имя: <span id="name"></span></p>
-              <p class="applications__list-item-title">Услуга: <span id="service"></span></p>
-              <ul class="applications__list applications__list-inner">
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
+          <li class="admin-applications__list-item">
+            <form class="admin-applications__list-item-text" action="">
+              <p class="admin-applications__list-item-title">Имя: <span id="name"></span></p>
+              <p class="admin-applications__list-item-title">Услуга: <span id="service"></span></p>
+              <ul class="admin-applications__list admin-applications__list-inner">
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Почта: <span id="email"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Почта: <span id="email"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
                 </li>
-                <hr class="applications__list-inner-line" />
-                <li class="applications__list-inner-item">
-                  <button class="button applications__list-item-text-button" type="submit">
-                    Перенести заявку в архив
+                <hr class="admin-applications__list-inner-line" />
+                <li class="admin-applications__list-inner-item">
+                  <button class="button admin-applications__list-item-text-button" type="submit">
+                    Перенести в архив
                   </button>
                 </li>
               </ul>
             </form>
-            <div class="applications__list-item-icon" id="applications-dropdown-list-arrow">
+            <div class="admin-applications__list-item-icon" id="admin-applications-dropdown-list-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
                 <path
                   d="M1 1.5L8 7.5L15 1.5"
@@ -252,29 +256,29 @@
               </svg>
             </div>
           </li>
-          <li class="applications__list-item">
-            <form class="applications__list-item-text" action="">
-              <p class="applications__list-item-title">Имя: <span id="name"></span></p>
-              <p class="applications__list-item-title">Услуга: <span id="service"></span></p>
-              <ul class="applications__list applications__list-inner">
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
+          <li class="admin-applications__list-item">
+            <form class="admin-applications__list-item-text" action="">
+              <p class="admin-applications__list-item-title">Имя: <span id="name"></span></p>
+              <p class="admin-applications__list-item-title">Услуга: <span id="service"></span></p>
+              <ul class="admin-applications__list admin-applications__list-inner">
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Почта: <span id="email"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Почта: <span id="email"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
                 </li>
-                <hr class="applications__list-inner-line" />
-                <li class="applications__list-inner-item">
-                  <button class="button applications__list-item-text-button" type="submit">
-                    Перенести заявку в архив
+                <hr class="admin-applications__list-inner-line" />
+                <li class="admin-applications__list-inner-item">
+                  <button class="button admin-applications__list-item-text-button" type="submit">
+                    Перенести в архив
                   </button>
                 </li>
               </ul>
             </form>
-            <div class="applications__list-item-icon" id="applications-dropdown-list-arrow">
+            <div class="admin-applications__list-item-icon" id="admin-applications-dropdown-list-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
                 <path
                   d="M1 1.5L8 7.5L15 1.5"
@@ -286,29 +290,29 @@
               </svg>
             </div>
           </li>
-          <li class="applications__list-item">
-            <form class="applications__list-item-text" action="">
-              <p class="applications__list-item-title">Имя: <span id="name"></span></p>
-              <p class="applications__list-item-title">Услуга: <span id="service"></span></p>
-              <ul class="applications__list applications__list-inner">
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
+          <li class="admin-applications__list-item">
+            <form class="admin-applications__list-item-text" action="">
+              <p class="admin-applications__list-item-title">Имя: <span id="name"></span></p>
+              <p class="admin-applications__list-item-title">Услуга: <span id="service"></span></p>
+              <ul class="admin-applications__list admin-applications__list-inner">
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Почта: <span id="email"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Почта: <span id="email"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
                 </li>
-                <hr class="applications__list-inner-line" />
-                <li class="applications__list-inner-item">
-                  <button class="button applications__list-item-text-button" type="submit">
-                    Перенести заявку в архив
+                <hr class="admin-applications__list-inner-line" />
+                <li class="admin-applications__list-inner-item">
+                  <button class="button admin-applications__list-item-text-button" type="submit">
+                    Перенести в архив
                   </button>
                 </li>
               </ul>
             </form>
-            <div class="applications__list-item-icon" id="applications-dropdown-list-arrow">
+            <div class="admin-applications__list-item-icon" id="admin-applications-dropdown-list-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
                 <path
                   d="M1 1.5L8 7.5L15 1.5"
@@ -320,29 +324,29 @@
               </svg>
             </div>
           </li>
-          <li class="applications__list-item">
-            <form class="applications__list-item-text" action="">
-              <p class="applications__list-item-title">Имя: <span id="name"></span></p>
-              <p class="applications__list-item-title">Услуга: <span id="service"></span></p>
-              <ul class="applications__list applications__list-inner">
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
+          <li class="admin-applications__list-item">
+            <form class="admin-applications__list-item-text" action="">
+              <p class="admin-applications__list-item-title">Имя: <span id="name"></span></p>
+              <p class="admin-applications__list-item-title">Услуга: <span id="service"></span></p>
+              <ul class="admin-applications__list admin-applications__list-inner">
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Почта: <span id="email"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Почта: <span id="email"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
                 </li>
-                <hr class="applications__list-inner-line" />
-                <li class="applications__list-inner-item">
-                  <button class="button applications__list-item-text-button" type="submit">
-                    Перенести заявку в архив
+                <hr class="admin-applications__list-inner-line" />
+                <li class="admin-applications__list-inner-item">
+                  <button class="button admin-applications__list-item-text-button" type="submit">
+                    Перенести в архив
                   </button>
                 </li>
               </ul>
             </form>
-            <div class="applications__list-item-icon" id="applications-dropdown-list-arrow">
+            <div class="admin-applications__list-item-icon" id="admin-applications-dropdown-list-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
                 <path
                   d="M1 1.5L8 7.5L15 1.5"
@@ -354,29 +358,29 @@
               </svg>
             </div>
           </li>
-          <li class="applications__list-item">
-            <form class="applications__list-item-text" action="">
-              <p class="applications__list-item-title">Имя: <span id="name"></span></p>
-              <p class="applications__list-item-title">Услуга: <span id="service"></span></p>
-              <ul class="applications__list applications__list-inner">
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
+          <li class="admin-applications__list-item">
+            <form class="admin-applications__list-item-text" action="">
+              <p class="admin-applications__list-item-title">Имя: <span id="name"></span></p>
+              <p class="admin-applications__list-item-title">Услуга: <span id="service"></span></p>
+              <ul class="admin-applications__list admin-applications__list-inner">
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Почта: <span id="email"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Почта: <span id="email"></span></p>
                 </li>
-                <li class="applications__list-inner-item">
-                  <p class="applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
                 </li>
-                <hr class="applications__list-inner-line" />
-                <li class="applications__list-inner-item">
-                  <button class="button applications__list-item-text-button" type="submit">
-                    Перенести заявку в архив
+                <hr class="admin-applications__list-inner-line" />
+                <li class="admin-applications__list-inner-item">
+                  <button class="button admin-applications__list-item-text-button" type="submit">
+                    Перенести в архив
                   </button>
                 </li>
               </ul>
             </form>
-            <div class="applications__list-item-icon" id="applications-dropdown-list-arrow">
+            <div class="admin-applications__list-item-icon" id="admin-applications-dropdown-list-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
                 <path
                   d="M1 1.5L8 7.5L15 1.5"

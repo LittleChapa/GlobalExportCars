@@ -1,11 +1,11 @@
 const list = document.querySelector('#list');
 const burger = document.querySelector('#burger');
 const listItem = document.querySelectorAll('.header__list-item');
-const logo = document.querySelector('.header__mobile-link');
+const logoMobile = document.querySelector('.header__mobile-link');
 
 const listItems = Array.from(listItem);
 
-listItems.unshift(logo);
+listItems.unshift(logoMobile);
 
 listItems.forEach((item) => {
   onBurger(item);
@@ -13,7 +13,7 @@ listItems.forEach((item) => {
 onBurger(burger);
 function onBurger(element) {
   element.addEventListener('click', () => {
-    if ((element == logo && !burger.classList.contains('header__burger_active')) || window.innerWidth > 768) {
+    if ((element == logoMobile && !burger.classList.contains('header__burger_active')) || window.innerWidth > 768) {
       return;
     }
     burger.classList.toggle('header__burger_active');
