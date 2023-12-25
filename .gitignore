@@ -2,3 +2,6 @@
 /server/node_modules
 /client/node_modules
 /styles
+
+# Local Netlify folder
+.netlify
