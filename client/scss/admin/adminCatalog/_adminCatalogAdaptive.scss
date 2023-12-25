@@ -1,0 +1,31 @@
+@media (max-width: $lg) {
+  .admin-catalog {
+    &__list {
+      grid-template-columns: repeat(3, minmax(auto, 300px));
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .admin-catalog {
+    &__list {
+      grid-template-columns: repeat(2, minmax(auto, 100%));
+    }
+
+    &__form {
+      &-buttons {
+        &-item {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .admin-catalog {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}

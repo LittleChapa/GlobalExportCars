@@ -1,23 +1,28 @@
 .button {
-    display: block;
-    width: fit-content;
-    margin: 130px auto 0 auto;
-    color: $color-foreign;
+  display: block;
+  width: fit-content;
+  margin: 130px auto 0 auto;
+  color: $color-foreign;
+  font-size: $fz-s;
+  font-weight: 600;
+  padding: 20px 40px;
+  background-color: $color-primary;
+  cursor: pointer;
+  transition: 0.3s;
+  &_small {
+    margin: 0;
     font-size: $fz-s;
-    font-weight: 600;
-    padding: 20px 40px;
-    background-color: $color-primary;
-    cursor: pointer;
-    transition: 0.3s;
-    &_small {
-        margin: 0;
-        font-size: $fz-s;
-        padding: 10px 25px;
-    }
-    &_mt30 {
-        margin-top: 30px;
-    }
-    &:hover {
-        @include button-hovering;
-    }
+    padding: 10px 25px;
+  }
+  &_mt30 {
+    margin-top: 30px;
+  }
+  &_right {
+    margin: 0;
+    margin-left: auto;
+    margin-bottom: 30px;
+  }
+  &:hover {
+    @include button-hovering;
+  }
 }

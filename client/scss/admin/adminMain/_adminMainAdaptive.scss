@@ -1,0 +1,14 @@
+@media (max-width: $md) {
+  .admin-main {
+    &__form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      > label {
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

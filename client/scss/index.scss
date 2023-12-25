@@ -24,9 +24,11 @@
 // админ панель
 @import './admin/adminPanel/adminPanel';
 @import './admin/adminMain/adminMain';
-@import './admin/adminApplications/adminApplications';
 @import './admin/adminAbout/adminAbout';
 @import './admin/adminCatalog/adminCatalog';
+@import './admin/adminServices/adminServices';
+@import './admin/adminFaq/adminFaq';
+@import './admin/adminApplications/adminApplications';
 
 // медиа
 @import './media';

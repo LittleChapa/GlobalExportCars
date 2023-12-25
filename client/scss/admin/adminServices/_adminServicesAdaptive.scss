@@ -1,12 +1,14 @@
 @media (max-width: $md) {
-  .admin-about {
+  .admin-services {
     &__list {
       grid-template-columns: 1fr;
     }
 
     &__form {
-      &-button {
-        margin-top: 15px;
+      &-buttons {
+        &-item {
+          margin: 0;
+        }
       }
     }
   }
