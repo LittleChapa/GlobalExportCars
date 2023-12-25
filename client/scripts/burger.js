@@ -1,10 +1,13 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 const list = document.querySelector('#list');
 const burger = document.querySelector('#burger');
 const listItem = document.querySelectorAll('.header__list-item');
 const logoMobile = document.querySelector('.header__mobile-link');
 
 const listItems = Array.from(listItem);
-
+console.log(process.env.APP_API_URL);
 listItems.unshift(logoMobile);
 
 listItems.forEach((item) => {
