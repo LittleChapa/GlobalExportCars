@@ -1,1 +1,0 @@
-document.querySelector("#arrow").addEventListener("click",(()=>{window.scrollTo(0,window.innerHeight-70)}));

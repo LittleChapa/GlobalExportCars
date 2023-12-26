@@ -21,11 +21,11 @@ module.exports = (env = { mode: 'development' }) => {
     },
     output: {
       path: path.resolve(__dirname, 'build'),
-      filename: '[name].[contenthash].js',
+      filename: 'scripts/[name].[contenthash].js',
       clean: true,
     },
     plugins: [
-      new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public', 'index.html') }),
+      new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public', 'index.html'), filename: 'index.html' }),
       new MiniCssExtractPlugin({
         filename: 'css/[name].[contenthash:8].css',
         chunkFilename: 'css/[name].[contenthash:8].css',
