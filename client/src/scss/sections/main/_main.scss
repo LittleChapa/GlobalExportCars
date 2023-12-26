@@ -1,7 +1,7 @@
 .main {
   height: 100svh;
   background-blend-mode: multiply;
-  background: url('../images/main_bg.jpg') rgba(0, 0, 0, 0.4) no-repeat center top / cover;
+  // background: url('../../../../public/images/main_bg.jpg') rgba(0, 0, 0, 0.4) no-repeat center top / cover;
   padding: 0;
   transition: height 0.3s;
   &__inner {

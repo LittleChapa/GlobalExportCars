@@ -1,4 +1,4 @@
-function onModal(modalButton, modal, modalClassActive, modalForm) {
+export function onModal(modalButton, modal, modalClassActive, modalForm) {
   modalButton.addEventListener('click', () => {
     modal.classList.toggle(modalClassActive);
     document.body.classList.toggle('noscroll');

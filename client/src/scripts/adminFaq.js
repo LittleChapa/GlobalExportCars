@@ -1,3 +1,4 @@
+import { onModal } from './adminModal';
 const faqModalButton = document.querySelector('#faqButton');
 const faqModal = document.querySelector('.admin-faq-modal');
 const faqModalForm = document.querySelector('.admin-faq-modal__form');

@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <title>Global Export Cars</title>
-    <link rel="stylesheet" href="./styles/index.css?v=*" />
     <link rel="icon" href="./images/logo.png" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css && htmlWebpackPlugin.files.css[0] %>" />
   </head>
   <body>
     <header class="header">
@@ -725,9 +724,5 @@
         </div>
       </div>
     </section>
-    <script type="module" src="./scripts/burger.js"></script>
-    <script src="./scripts/scroll.js"></script>
-    <script src="./scripts/dropDownList.js"></script>
-    <script src="./scripts/anchorLink.js"></script>
   </body>
 </html>

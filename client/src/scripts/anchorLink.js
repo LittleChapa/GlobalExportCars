@@ -5,6 +5,7 @@ const feedback = document.querySelector('.feedback');
 const arrayLinks = Array.from(links);
 const arraySections = Array.from(sections);
 const logo = document.querySelector('.header__list-link-logo');
+const logoMobile = document.querySelector('.header__mobile-link');
 
 const newArraySections = arraySections.filter((item, i) => {
   return i !== 2;
