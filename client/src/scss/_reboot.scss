@@ -96,3 +96,11 @@ section {
   font-size: $fz-s;
   font-weight: 700;
 }
+
+#toast-container {
+  max-width: 350px !important;
+}
+
+.toast {
+  width: 100% !important;
+}

@@ -1,6 +1,9 @@
 // подключение шрифта
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+// библиотеки
+@import 'toastr';
+
 // настройки стилей
 @import './variables';
 @import './reboot';
