@@ -30,6 +30,12 @@
     }
   }
 
+  &__inner {
+    &-top {
+      display: flex;
+    }
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(4, minmax(auto, 300px));

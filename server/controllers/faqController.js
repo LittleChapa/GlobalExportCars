@@ -1,4 +1,4 @@
-const { Questions } = require("../models/models");
+const { Questions } = require('../models/models');
 
 class FaqController {
   async create(req, res) {
