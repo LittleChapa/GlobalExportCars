@@ -1,12 +1,12 @@
 import { $authHost, $host } from './index';
 
-export const creteCatalog = async (catalog) => {
+export const createCatalog = async (catalog) => {
   const { data } = await $host.post('api/catalog/', catalog);
   return data;
 };
 
 export const updateCatalog = async (id, catalog) => {
-  const { data } = await $host.patch('api/catalog/' + id, catalog);
+  const { data } = await $host.patch('api/catalog/update/' + id, catalog);
   return data;
 };
 

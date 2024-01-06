@@ -67,6 +67,7 @@
     grid-template-columns: repeat(4, minmax(auto, 300px));
     justify-content: space-between;
     column-gap: 15px;
+    row-gap: 30px;
     &-card {
       background-color: $color-grey;
       width: 100%;

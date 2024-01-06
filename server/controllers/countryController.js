@@ -1,4 +1,4 @@
-const { Country, Catalog } = require("../models/models");
+const { Country, Catalog } = require('../models/models');
 
 class CountryController {
   async create(req, res) {
@@ -18,7 +18,7 @@ class CountryController {
   async getOne(req, res) {
     const { id } = req.params;
 
-    const country = await Country.findAll({
+    const country = await Country.findOne({
       include: [Catalog],
       where: { id },
     });
