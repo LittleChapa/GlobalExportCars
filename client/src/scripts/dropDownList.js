@@ -58,34 +58,3 @@ dropDownList(
   'feedback__form-list-arrow_active',
   'feedback__form-list-item_selected'
 );
-
-// Часто задаваемые вопросы
-
-const faqItems = document.querySelectorAll('.faq__content-item');
-const faqItemsBlock = document.querySelectorAll('.faq__content-item-text');
-const faqIcon = document.querySelectorAll('.faq__content-item-icon');
-
-function animationDropList(items, blocks, icon, blockActive, iconActive) {
-  const itemsHeight = [];
-  blocks.forEach((item) => {
-    itemsHeight.push(item.offsetHeight);
-    item.style.height = '0px';
-  });
-  items.forEach((item) => {
-    item.addEventListener('click', (e) => {
-      for (let i = 0; i < items.length; i++) {
-        if (items[i] == item && blocks[i].style.height == '0px') {
-          blocks[i].style.height = `${itemsHeight[i]}px`;
-          blocks[i].classList.add(blockActive);
-          icon[i].classList.add(iconActive);
-        } else {
-          blocks[i].style.height = '0px';
-          blocks[i].classList.remove(blockActive);
-          icon[i].classList.remove(iconActive);
-        }
-      }
-    });
-  });
-}
-
-animationDropList(faqItems, faqItemsBlock, faqIcon, 'faq__content-item-text_active', 'faq__content-item-icon_active');

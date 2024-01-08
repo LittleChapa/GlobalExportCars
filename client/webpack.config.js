@@ -23,6 +23,7 @@ module.exports = (env = { mode: 'development' }) => {
       scroll: path.resolve(__dirname, 'src', 'scripts', 'scroll.js'),
       adminMain: path.resolve(__dirname, 'src', 'scripts', 'adminMain.js'),
       adminAbout: path.resolve(__dirname, 'src', 'scripts', 'adminAbout.js'),
+      adminApplications: path.resolve(__dirname, 'src', 'scripts', 'adminApplications.js'),
     },
     output: {
       path: path.resolve(__dirname, 'build'),
@@ -66,7 +67,7 @@ module.exports = (env = { mode: 'development' }) => {
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'public', 'pages', 'adminApplications.html'),
         filename: 'admin/adminApplications.html',
-        chunks: ['style', 'adminDropDownList'],
+        chunks: ['style', 'adminDropDownList', 'adminApplications'],
         chunkFilename: ['admin/adminApplications.html'],
         inject: 'body',
       }),

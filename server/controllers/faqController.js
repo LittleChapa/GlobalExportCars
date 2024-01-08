@@ -9,7 +9,17 @@ class FaqController {
     return res.json(faq);
   }
 
-  async update(req, res) {}
+  async update(req, res) {
+    const { id } = req.params;
+    const { title, descr } = req.body;
+    const faq = await Questions.findOne({ where: { id } });
+    faq.update({
+      title,
+      descr,
+    });
+
+    return res.json(faq);
+  }
 
   async remove(req, res) {
     const { id } = req.params;

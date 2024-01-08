@@ -340,7 +340,7 @@
       <div class="container">
         <h2 class="title">Услуги</h2>
         <div class="services__wrapper">
-          <div class="services__card">
+          <!-- <div class="services__card">
             <h2 class="services__card-title">Пакет “Под ключ”</h2>
             <p class="services__card-descr">
               Полное сопровождение покупки. Сделаем всю работу за вас на всех этапах: подбор автомобиля по вашим
@@ -383,7 +383,7 @@
             <h2 class="services__card-title">Перегон на эвакуаторе</h2>
             <p class="services__card-descr">Перегон автомобиля на эвакуаторе на территории России, Грузии и Армении.</p>
             <p class="services__card-price">От 1500$</p>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -391,7 +391,7 @@
       <div class="container">
         <h2 class="title">Часто задаваемые вопросы</h2>
         <div class="faq__content">
-          <div class="faq__content-item">
+          <!-- <div class="faq__content-item">
             <h3 class="faq__content-item-title">Какую услугу выбрать?</h3>
             <p class="faq__content-item-text">
               Наша команда предоставляет пакеты услуг под разные задачи и бюджет. При приобретении пакета “Под ключ”, мы
@@ -546,7 +546,7 @@
                 />
               </svg>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -556,20 +556,20 @@
         <form class="feedback__form" action="">
           <label class="feedback__form-item" for="">
             <h3 class="feedback__form-item-title">Имя</h3>
-            <input class="input" type="text" placeholder="Ваше имя" />
+            <input id="applicationsName" required class="input" type="text" placeholder="Ваше имя" />
           </label>
           <label class="feedback__form-item" for="">
             <h3 class="feedback__form-item-title">Телефон</h3>
-            <input class="input" type="tel" placeholder="Номер телефона" />
+            <input id="applicationsPhone" required class="input" type="tel" placeholder="Номер телефона" />
           </label>
           <label class="feedback__form-item" for="">
             <h3 class="feedback__form-item-title">Почта</h3>
-            <input class="input" type="email" placeholder="Адрес почты" />
+            <input id="applicationsMail" required class="input" type="email" placeholder="Адрес почты" />
           </label>
           <label class="feedback__form-item" for="">
             <h3 class="feedback__form-item-title">Выберите услугу</h3>
             <div class="input feedback__form-list">
-              <span class="feedback__form-list-selected">Консультация</span>
+              <span id="applicationsService" class="feedback__form-list-selected">Консультация</span>
               <ul class="feedback__form-list-select">
                 <li class="feedback__form-list-item feedback__form-list-item_selected">Консультация</li>
                 <li class="feedback__form-list-item">Пакет "Под ключ"</li>
@@ -597,11 +597,11 @@
             <textarea
               class="input feedback__form-item-text"
               name=""
-              id=""
+              id="applicationsWish"
               placeholder="Марка, модель, год, комплектация"
             ></textarea>
           </label>
-          <button class="button button_mt30" type="submit">Отправить заявку</button>
+          <button id="applicationsSend" class="button button_mt30" type="submit">Отправить заявку</button>
         </form>
         <p class="feedback__subtitle">
           Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой

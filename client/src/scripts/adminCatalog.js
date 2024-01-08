@@ -64,6 +64,7 @@ getAllCountry().then((data) => {
         catalogListSelected.innerText = listItem.innerText;
         getOneCountry(catalogSpanCountryId)
           .then((data) => {
+            console.log(data);
             let dataCatalogs = data.catalogs;
             adminCatalogList.innerHTML = '';
             const newData = dataCatalogs.sort(function (a, b) {
@@ -368,6 +369,10 @@ getOneCountry(catalogSpanCountryId)
       catalogCardDeleteButton.forEach((item, t) => {
         item.addEventListener('click', (e) => {
           e.preventDefault();
+          if (i === t) {
+            toastr.success('Товар успешно удален!');
+          }
+
           removeCatalog(data[t].id).then(catalogItem[t].remove());
         });
       });
@@ -416,7 +421,7 @@ catalogButtonAdd.addEventListener('click', (e) => {
     catalogNewCardDrive.value = '';
     catalogNewImage.src = '../images/catalog_img.jpg';
     newImageLabel = null;
-    toastr.success('Изменения сохранены успешно!');
+    toastr.success('Товар успешно добавлен!');
     getOneCountry(catalogSpanCountryId)
       .then((data) => {
         adminCatalogList.innerHTML = '';
@@ -570,6 +575,10 @@ catalogButtonAdd.addEventListener('click', (e) => {
           catalogCardDeleteButton.forEach((item, t) => {
             item.addEventListener('click', (e) => {
               e.preventDefault();
+              if (i === t) {
+                toastr.success('Товар успешно удален!');
+              }
+
               removeCatalog(data[t].id).then(catalogItem[t].remove());
             });
           });
