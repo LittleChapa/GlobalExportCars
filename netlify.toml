@@ -1,0 +1,3 @@
+[build]
+  command = "npm run build:prod"  # Команда сборки вашего проекта
+  publish = "client/build"        # Каталог с файлами, которые нужно опубликовать
