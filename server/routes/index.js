@@ -14,7 +14,7 @@ router.use('/user', userRouter);
 router.use('/main', mainRouter);
 router.use('/about', aboutRouter);
 router.use('/catalog', catalogRouter);
-router.use('/application', applicationRouter);
+router.use('/applications', applicationRouter);
 router.use('/service', serviceRouter);
 router.use('/country', countryRouter);
 router.use('/faq', faqRouter);

@@ -9,7 +9,7 @@ getAllApplications()
       return a.id - b.id;
     });
     data.forEach((item) => {
-      if (item.archive) {
+      if (!item.archive) {
         return;
       }
       // Create list item element
@@ -46,14 +46,14 @@ getAllApplications()
       const button = document.createElement('button');
       button.className = 'button admin-applications__list-item-text-button';
       button.type = 'submit';
-      button.textContent = 'Перенести в архив';
+      button.textContent = 'Вернуть в заявки';
       innerListItemBtn.appendChild(button);
 
       button.addEventListener('click', (e) => {
         e.preventDefault();
         updateApplications(item.id).then(() => {
           listItem.remove();
-          toastr.success('Заявка перенесена в архив');
+          toastr.success('Заявка возвращена');
         });
       });
 

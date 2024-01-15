@@ -23,13 +23,13 @@ const About = sequelize.define('about', {
 const Questions = sequelize.define('question', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   title: { type: DataTypes.STRING, allowNull: false },
-  descr: { type: DataTypes.STRING, allowNull: false },
+  descr: { type: DataTypes.TEXT, allowNull: false },
 });
 
 const Services = sequelize.define('service', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   title: { type: DataTypes.STRING, allowNull: false },
-  descr: { type: DataTypes.STRING, allowNull: false },
+  descr: { type: DataTypes.TEXT, allowNull: false },
   price: { type: DataTypes.STRING, allowNull: false },
 });
 
@@ -39,7 +39,7 @@ const Applications = sequelize.define('application', {
   service: { type: DataTypes.STRING, allowNull: false },
   phone: { type: DataTypes.STRING, allowNull: false },
   email: { type: DataTypes.STRING, allowNull: false },
-  wish: { type: DataTypes.STRING },
+  wish: { type: DataTypes.TEXT },
   archive: { type: DataTypes.BOOLEAN, allowNull: false },
 });
 

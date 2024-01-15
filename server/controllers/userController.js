@@ -11,25 +11,6 @@ const generateJwt = (id, login, role) => {
 };
 
 class UserController {
-  async registration(req, res, next) {
-    const { login, password } = req.body;
-
-    if (!login || !password) {
-      return next(ApiError.badRequest('Некорректный email или password'));
-    }
-
-    const condidate = await User.findOne({ where: { login } });
-
-    if (condidate) {
-      return next(ApiError.badRequest('Ошибка'));
-    }
-
-    const hashPassword = await bcrypt.hash(password, 5);
-    const user = await User.create({ login, password: hashPassword });
-    const token = generateJwt(user.id, user.login, user.role);
-    return res.json({ token });
-  }
-
   async login(req, res, next) {
     const { login, password } = req.body;
     const user = await User.findOne({ where: { login } });
@@ -56,9 +37,9 @@ class UserController {
     const { name, tel, mail, service, descr } = req.body;
     const message = {
       to: '26studio.college@gmail.com',
-      subject: `${name} заполнил форму`,
+      subject: `Новая заявка - ${service}`,
       html: `<p>
-      ${name} выбрал услугу ${service} <br> Телефон: ${tel} <br> Почта: ${mail} <br> Пожелания ${descr}
+      Имя: ${name} <br><br> Услуга: ${service} <br><br> Телефон: ${tel} <br><br> Почта: ${mail} <br><br> Пожелания: ${descr}
       </p>`,
     };
     mailer(message);
