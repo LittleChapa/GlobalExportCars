@@ -80,10 +80,10 @@ module.exports = (env = { mode: 'development' }) => {
         inject: 'body',
       }),
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'public', 'pages', 'adminAuth.html'),
-        filename: 'admin/adminAuth.html',
+        template: path.resolve(__dirname, 'public', 'pages', 'index.html'),
+        filename: 'admin/index.html',
         chunks: ['style'],
-        chunkFilename: ['admin/adminAuth.html'],
+        chunkFilename: ['admin/index.html'],
         inject: 'body',
       }),
       new HtmlWebpackPlugin({
