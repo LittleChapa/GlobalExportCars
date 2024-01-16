@@ -1,1 +1,138 @@
-<!doctype html><html lang="ru"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Панель администратора - Услуги</title><link rel="icon" href="../images/logo.png"/><script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script><link href="../css/style.543f934f.css" rel="stylesheet"></head><body><div class="admin-services-modal"><form action="" class="admin-services__form admin-services-modal__form"><label for="" class="admin-services__form-item"><h3 class="admin-services__form-item-title">Заголовок</h3><input id="serviceModalTitle" class="input admin-services__form-item-input" placeholder="Заголовок..."/></label> <label for="" class="admin-services__form-item"><h3 class="admin-services__form-item-title">Текст</h3><textarea id="serviceModalDescr" name="" id="" class="input admin-services__form-item-input admin-services__form-item-input-text" placeholder="Какой-то текст..."></textarea></label> <label for="" class="admin-services__form-item"><h3 class="admin-services__form-item-title">Цена</h3><input id="serviceModalPrice" class="input admin-services__form-item-input" placeholder="Цена..."/></label> <button id="serviceModalAdd" class="button admin-services__form-buttons-item" type="submit">Добавить</button></form></div><section class="admin-services"><div class="container"><a href="./adminPanel.html" class="admin-link">Назад</a><h2 class="title">Услуги</h2><button id="servicesButton" class="button button_small button_right">Добавить</button><ul class="admin-services__list"></ul></div></section><script defer="defer" src="../scripts/style.31d6cfe0d16ae931b73c.js"></script><script defer="defer" src="../scripts/adminModal.33078016c5e1e9f07c35.js"></script><script defer="defer" src="../scripts/adminServices.51a38f1be52ee025c83d.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Панель администратора - Услуги</title>
+    <link rel="icon" href="../images/logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link href="../css/style.87e6e740.css" rel="stylesheet"></head>
+  <body>
+    <div class="admin-services-modal">
+      <form action="" class="admin-services__form admin-services-modal__form">
+        <label for="" class="admin-services__form-item">
+          <h3 class="admin-services__form-item-title">Заголовок</h3>
+          <input
+            id="serviceModalTitle"
+            type="text"
+            class="input admin-services__form-item-input"
+            placeholder="Заголовок..."
+          />
+        </label>
+        <label for="" class="admin-services__form-item">
+          <h3 class="admin-services__form-item-title">Текст</h3>
+          <textarea
+            id="serviceModalDescr"
+            name=""
+            id=""
+            class="input admin-services__form-item-input admin-services__form-item-input-text"
+            placeholder="Какой-то текст..."
+          ></textarea>
+        </label>
+        <label for="" class="admin-services__form-item">
+          <h3 class="admin-services__form-item-title">Цена</h3>
+          <input
+            id="serviceModalPrice"
+            type="text"
+            class="input admin-services__form-item-input"
+            placeholder="Цена..."
+          />
+        </label>
+        <button id="serviceModalAdd" class="button admin-services__form-buttons-item" type="submit">Добавить</button>
+      </form>
+    </div>
+    <section class="admin-services">
+      <div class="container">
+        <a href="./adminPanel.html" class="admin-link">Назад</a>
+        <h2 class="title">Услуги</h2>
+        <button id="servicesButton" class="button button_small button_right">Добавить</button>
+        <ul class="admin-services__list">
+          <!-- <li class="admin-services__list-item">
+            <form action="" class="admin-services__form">
+              <label for="" class="admin-services__form-item">
+                <h3 class="admin-services__form-item-title">Заголовок</h3>
+                <input type="text" value="Пакет “Под ключ”" class="input admin-services__form-item-input" />
+              </label>
+              <label for="" class="admin-services__form-item">
+                <h3 class="admin-services__form-item-title">Текст</h3>
+                <textarea
+                  name=""
+                  id=""
+                  class="input admin-services__form-item-input admin-services__form-item-input-text"
+                >
+Наша команда предоставляет пакеты услуг под разные задачи и бюджет. При приобретении пакета “Под ключ”, мы решим все вопросы без Вашего физического присутствия. Вы получите автомобиль в Вашем городе, готовый к постановке на учет в ГАИ. Если вы хотите осмотреть автомобиль перед покупкой лично, Вам подойдет пакет “Оптимальный”. Мы встретим Вас в Грузии, будем сопровождать на авторынке Рустави и проведем подбор при Вас. После покупки автомобиль отправится на таможню и будет находиться там 1-2 дня. Вы сможете забрать авто из нашего офиса на авторынке Рустави. Пакет "Подбор-безлимит" подойдет вам, если вы не можете самостоятельно выбрать и осмотреть автомобиль в Грузии. Поможем подобрать, осмотрим и сделаем все необходимые проверки за вас. Таможенное оформление и логистика в данную услугу не входят.</textarea
+                >
+              </label>
+              <label for="" class="admin-services__form-item">
+                <h3 class="admin-services__form-item-title">Цена</h3>
+                <input type="text" value="От 2000$" class="input admin-services__form-item-input" />
+              </label>
+              <div class="admin-services__form-buttons">
+                <button class="button admin-services__form-buttons-item">Сохранить</button>
+                <button class="button admin-services__form-buttons-item admin-services__form-buttons-item_red-bg">
+                  Удалить
+                </button>
+              </div>
+            </form>
+          </li>
+          <li class="admin-services__list-item">
+            <form action="" class="admin-services__form">
+              <label for="" class="admin-services__form-item">
+                <h3 class="admin-services__form-item-title">Заголовок</h3>
+                <input type="text" value="Пакет “Под ключ”" class="input admin-services__form-item-input" />
+              </label>
+              <label for="" class="admin-services__form-item">
+                <h3 class="admin-services__form-item-title">Текст</h3>
+                <textarea
+                  name=""
+                  id=""
+                  class="input admin-services__form-item-input admin-services__form-item-input-text"
+                >
+Наша команда предоставляет пакеты услуг под разные задачи и бюджет. При приобретении пакета “Под ключ”, мы решим все вопросы без Вашего физического присутствия. Вы получите автомобиль в Вашем городе, готовый к постановке на учет в ГАИ. Если вы хотите осмотреть автомобиль перед покупкой лично, Вам подойдет пакет “Оптимальный”. Мы встретим Вас в Грузии, будем сопровождать на авторынке Рустави и проведем подбор при Вас. После покупки автомобиль отправится на таможню и будет находиться там 1-2 дня. Вы сможете забрать авто из нашего офиса на авторынке Рустави. Пакет "Подбор-безлимит" подойдет вам, если вы не можете самостоятельно выбрать и осмотреть автомобиль в Грузии. Поможем подобрать, осмотрим и сделаем все необходимые проверки за вас. Таможенное оформление и логистика в данную услугу не входят.</textarea
+                >
+              </label>
+              <label for="" class="admin-services__form-item">
+                <h3 class="admin-services__form-item-title">Цена</h3>
+                <input type="text" value="От 2000$" class="input admin-services__form-item-input" />
+              </label>
+              <div class="admin-services__form-buttons">
+                <button class="button admin-services__form-buttons-item">Сохранить</button>
+                <button class="button admin-services__form-buttons-item admin-services__form-buttons-item_red-bg">
+                  Удалить
+                </button>
+              </div>
+            </form>
+          </li>
+          <li class="admin-services__list-item">
+            <form action="" class="admin-services__form">
+              <label for="" class="admin-services__form-item">
+                <h3 class="admin-services__form-item-title">Заголовок</h3>
+                <input type="text" value="Пакет “Под ключ”" class="input admin-services__form-item-input" />
+              </label>
+              <label for="" class="admin-services__form-item">
+                <h3 class="admin-services__form-item-title">Текст</h3>
+                <textarea
+                  name=""
+                  id=""
+                  class="input admin-services__form-item-input admin-services__form-item-input-text"
+                >
+Наша команда предоставляет пакеты услуг под разные задачи и бюджет. При приобретении пакета “Под ключ”, мы решим все вопросы без Вашего физического присутствия. Вы получите автомобиль в Вашем городе, готовый к постановке на учет в ГАИ. Если вы хотите осмотреть автомобиль перед покупкой лично, Вам подойдет пакет “Оптимальный”. Мы встретим Вас в Грузии, будем сопровождать на авторынке Рустави и проведем подбор при Вас. После покупки автомобиль отправится на таможню и будет находиться там 1-2 дня. Вы сможете забрать авто из нашего офиса на авторынке Рустави. Пакет "Подбор-безлимит" подойдет вам, если вы не можете самостоятельно выбрать и осмотреть автомобиль в Грузии. Поможем подобрать, осмотрим и сделаем все необходимые проверки за вас. Таможенное оформление и логистика в данную услугу не входят.</textarea
+                >
+              </label>
+              <label for="" class="admin-services__form-item">
+                <h3 class="admin-services__form-item-title">Цена</h3>
+                <input type="text" value="От 2000$" class="input admin-services__form-item-input" />
+              </label>
+              <div class="admin-services__form-buttons">
+                <button class="button admin-services__form-buttons-item">Сохранить</button>
+                <button class="button admin-services__form-buttons-item admin-services__form-buttons-item_red-bg">
+                  Удалить
+                </button>
+              </div>
+            </form>
+          </li> -->
+        </ul>
+      </div>
+    </section>
+  <script defer src="../scripts/style.272ab99623e99cc27b61.js"></script><script defer src="../scripts/adminModal.f29c81ae8be1f9f51494.js"></script><script defer src="../scripts/adminServices.3033fa1d9ee4508ca5f8.js"></script></body>
+</html>

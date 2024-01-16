@@ -1,4 +1,6 @@
 import toastr from 'toastr';
+import Splide from '@splidejs/splide';
+import '@splidejs/splide/css';
 import { getAllAbout } from '../http/aboutAPI';
 import { getAllCountry, getOneCountry } from '../http/countryAPI';
 import { getAllFaq } from '../http/faqAPI';
@@ -16,12 +18,31 @@ const logoMobile = document.querySelector('.header__mobile-link');
 const listItems = Array.from(listItem);
 const aboutTexts = document.querySelectorAll('.about__content-text');
 
-const catalogContent = document.querySelector('.catalog__content');
+const catalogContent = document.querySelector('.splide__list');
 const catalogButton = document.querySelector('.catalog__list');
 const catalogListSelected = document.querySelector('.catalog__list-selected');
 const catalogDropDownList = document.querySelector('.catalog__list-select');
 const catalogListArrow = document.querySelector('#catalog-dropdown-list-arrow');
 let catalogSpanCountryId = 1;
+
+let splide = new Splide( '.splide', {
+  perPage: 4,
+  breakpoints: {
+		1100: {
+			perPage: 3,
+    },
+    768: {
+      perPage: 2,
+    },
+    576: {
+      perPage: 1,
+      arrows: false
+    }
+  },
+  focus: 0,
+  gap: 20,
+  omitEnd: true,
+});
 
 const servicesWrapper = document.querySelector('.services__wrapper');
 
@@ -116,14 +137,18 @@ getAllCountry().then((data) => {
         listItem.classList.add('catalog__list-item_selected');
         catalogListSelected.innerText = listItem.innerText;
         getOneCountry(catalogSpanCountryId).then((data) => {
+          splide.destroy()
           let dataCatalogs = data.catalogs;
           catalogContent.innerHTML = '';
           const newData = dataCatalogs.sort(function (a, b) {
             return a.id - b.id;
           });
           for (let i = 0; i < newData.length; i++) {
+            let splideItem = document.createElement('li')
+            splideItem.className = 'splide__slide';
             let card = document.createElement('div');
             card.className = 'catalog__content-card';
+            splideItem.append(card)
 
             let imgContainer = document.createElement('div');
             imgContainer.className = 'catalog__content-card-img';
@@ -161,8 +186,9 @@ getAllCountry().then((data) => {
             card.appendChild(imgContainer);
             card.appendChild(aboutContainer);
 
-            catalogContent.appendChild(card);
+            catalogContent.appendChild(splideItem);
           }
+          splide.mount();
           return data.catalogs;
         });
       });
@@ -173,8 +199,12 @@ getAllCountry().then((data) => {
 getOneCountry(1).then((data) => {
   let dataCatalogs = data.catalogs;
   for (let i = 0; i < dataCatalogs.length; i++) {
+    let splideItem = document.createElement('li')
+    splideItem.className = 'splide__slide';
     let card = document.createElement('div');
     card.className = 'catalog__content-card';
+    splideItem.append(card)
+
 
     let imgContainer = document.createElement('div');
     imgContainer.className = 'catalog__content-card-img';
@@ -212,8 +242,9 @@ getOneCountry(1).then((data) => {
     card.appendChild(imgContainer);
     card.appendChild(aboutContainer);
 
-    catalogContent.appendChild(card);
+    catalogContent.appendChild(splideItem);
   }
+  splide.mount();
 });
 
 getAllService().then((data) => {

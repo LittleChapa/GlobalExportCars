@@ -35,7 +35,7 @@ module.exports = (env = { mode: 'development' }) => {
     module: {
       rules: [
         {
-          test: /\.scss$/,
+          test: /\.(sa|sc|c)ss$/,
           use: [
             // Creates `style` nodes from JS strings
             MiniCssExtractPlugin.loader,

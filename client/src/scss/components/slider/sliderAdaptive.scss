@@ -1,0 +1,22 @@
+@media (max-width: 1450px) {
+  .splide {
+    width: calc(100% - 70px) !important;
+    margin: 0 auto !important;
+    &__arrow--prev {
+      left: -2.8em !important;
+    }
+    &__arrow--next {
+      right: -2.8em !important;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .splide {
+    width: 100% !important;
+    margin: 0 !important;
+    &__pagination {
+      bottom: -1.6em !important;
+    }
+  }
+}

@@ -30,6 +30,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "axios": "^1.6.2",
     "jwt-decode": "^4.0.0",
     "toastr": "^2.1.4"

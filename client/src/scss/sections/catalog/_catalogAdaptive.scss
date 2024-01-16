@@ -26,11 +26,6 @@
     &__content {
       grid-template-columns: repeat(2, minmax(auto, 100%));
       row-gap: 15px;
-      &-card {
-        &-img {
-          height: 260px;
-        }
-      }
     }
   }
 }
