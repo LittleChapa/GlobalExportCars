@@ -36,7 +36,7 @@ class UserController {
   async nodeMailerGet(req, res) {
     const { name, tel, mail, service, descr } = req.body;
     const message = {
-      to: '26studio.college@gmail.com',
+      to: 'globalexportscars@gmail.com',
       subject: `Новая заявка - ${service}`,
       html: `<p>
       Имя: ${name} <br><br> Услуга: ${service} <br><br> Телефон: ${tel} <br><br> Почта: ${mail} <br><br> Пожелания: ${descr}

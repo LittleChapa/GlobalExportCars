@@ -28,9 +28,9 @@ app.use('/api', router);
 
 app.use(errorHandler);
 
-app.get('/admin', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/public/pages/adminAuth.html'));
-});
+// app.get('/admin', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../client/public/pages/adminAuth.html'));
+// });
 
 const start = async () => {
   try {

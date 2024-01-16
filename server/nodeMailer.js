@@ -6,12 +6,12 @@ const transporter = nodemailer.createTransport(
     port: 465,
     secure: true,
     auth: {
-      user: '26studio.college@gmail.com',
-      pass: 'jmxbxygojrrprmew',
+      user: 'globalexportscars@gmail.com',
+      pass: 'xhyvkuogwbziuqcx',
     },
   },
   {
-    from: '26Studio <26studio.college@gmail.com>',
+    from: 'GlobalExportCars <globalexportscars@gmail.com>',
   }
 );
 
