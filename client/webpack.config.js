@@ -27,7 +27,7 @@ module.exports = (env = { mode: 'development' }) => {
       adminApplicationsArchive: path.resolve(__dirname, 'src', 'scripts', 'adminApplicationsArchive.js'),
     },
     output: {
-      path: path.resolve(__dirname, '../build'),
+      path: path.resolve(__dirname, 'build'),
       filename: 'scripts/[name].[contenthash].js',
       assetModuleFilename: 'images/[name][contenthash][ext]',
       clean: true,
