@@ -119,6 +119,9 @@ getAllAbout().then((data) => {
 });
 
 getAllCountry().then((data) => {
+  data.sort(function (a, b) {
+    return a.id - b.id;
+  });
   catalogListSelected.innerText = data[0].name;
   catalogSpanCountryId = catalogListSelected.attributes.countryId.value;
   data.forEach((item) => {
@@ -198,6 +201,9 @@ getAllCountry().then((data) => {
 
 getOneCountry(1).then((data) => {
   let dataCatalogs = data.catalogs;
+  dataCatalogs.sort(function (a, b) {
+    return a.id - b.id;
+  });
   for (let i = 0; i < dataCatalogs.length; i++) {
     let splideItem = document.createElement('li')
     splideItem.className = 'splide__slide';
