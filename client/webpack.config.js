@@ -130,6 +130,7 @@ module.exports = (env = { mode: 'development' }) => {
             from: 'public/images/',
             to: 'images/[name][ext]',
           },
+          { from: 'src/robots.txt', to: '' },
         ],
       }),
       new Dotenv(),

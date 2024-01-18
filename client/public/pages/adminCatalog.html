@@ -1,75 +1,61 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Панель администратора - Каталог</title>
-    <link rel="icon" href="../images/logo.png" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  </head>
-  <body>
-    <div class="admin-catalog-modal">
-      <form class="admin-catalog__form admin-catalog-modal__form" action="./adminPanel.html" method="get">
-        <label for="catalogCard" class="admin-catalog__form-image">
-          <img src="../images/catalog_img.jpg" alt="" class="admin-catalog__form-new-image" />
-          <input type="file" name="catalogCard" id="catalogCard" />
-          <span class="admin-catalog__form-button">Изменить фото</span>
-        </label>
-        <input
-          type="text"
-          placeholder="Марка, модель"
-          class="input admin-catalog__form-input admin-catalog__form-input-new-title"
-        />
-        <input
-          type="text"
-          placeholder="Год выпуска"
-          class="input admin-catalog__form-input admin-catalog__form-input-new-descr"
-        />
-        <input
-          type="text"
-          placeholder="Основные характеристики"
-          class="input admin-catalog__form-input admin-catalog__form-input-new-characteristic"
-        />
-        <input
-          type="text"
-          placeholder="Привод"
-          class="input admin-catalog__form-input admin-catalog__form-input-new-drive"
-        />
-        <button id="adminCatalogButtonAdd" class="button admin-catalog__form-buttons-item" type="submit">
-          Добавить
-        </button>
-      </form>
-    </div>
-    <section class="admin-catalog">
-      <div class="container">
-        <a href="./adminPanel.html" class="admin-link">Назад</a>
-        <h2 class="title">Каталог</h2>
-        <div class="admin-catalog__inner">
-          <div class="admin-catalog__inner-top">
-            <div class="catalog__list">
-              <span class="catalog__list-selected" countryId="1">США</span>
-              <ul class="catalog__list-select">
-                <!-- <li class="catalog__list-item catalog__list-item_selected">США</li>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Панель администратора - Каталог</title>
+  <link rel="icon" href="../images/logo.png" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="admin-catalog-modal">
+    <form class="admin-catalog__form admin-catalog-modal__form" action="./adminPanel.html" method="get">
+      <label for="catalogCard" class="admin-catalog__form-image">
+        <img src="../images/catalog_img.jpg" alt="" class="admin-catalog__form-new-image" />
+        <input type="file" name="catalogCard" id="catalogCard" />
+        <span class="admin-catalog__form-button">Изменить фото</span>
+      </label>
+      <input type="text" placeholder="Марка, модель"
+        class="input admin-catalog__form-input admin-catalog__form-input-new-title" />
+      <input type="text" placeholder="Год выпуска"
+        class="input admin-catalog__form-input admin-catalog__form-input-new-descr" />
+      <input type="text" placeholder="Основные характеристики"
+        class="input admin-catalog__form-input admin-catalog__form-input-new-characteristic" />
+      <input type="text" placeholder="Привод"
+        class="input admin-catalog__form-input admin-catalog__form-input-new-drive" />
+      <button id="adminCatalogButtonAdd" class="button admin-catalog__form-buttons-item" type="submit">
+        Добавить
+      </button>
+    </form>
+  </div>
+  <section class="admin-catalog">
+    <div class="container">
+      <a href="./adminPanel.html" class="admin-link">Назад</a>
+      <h2 class="title">Каталог</h2>
+      <div class="admin-catalog__inner">
+        <div class="admin-catalog__inner-top">
+          <div class="catalog__list">
+            <span class="catalog__list-selected" countryId="1">США</span>
+            <ul class="catalog__list-select">
+              <!-- <li class="catalog__list-item catalog__list-item_selected">США</li>
                 <li class="catalog__list-item">Европа</li>
                 <li class="catalog__list-item">Корея</li>
                 <li class="catalog__list-item">Китай</li> -->
-              </ul>
-              <div class="catalog__list-arrow" id="catalog-dropdown-list-arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
-                  <path
-                    d="M1 1.5L8 7.5L15 1.5"
-                    stroke="#AEBBFF"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
+            </ul>
+            <div class="catalog__list-arrow" id="catalog-dropdown-list-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
+                <path d="M1 1.5L8 7.5L15 1.5" stroke="#AEBBFF" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </div>
-            <button id="catalogButton" class="button button_small button_right">Добавить</button>
           </div>
-          <ul class="admin-catalog__list">
-            <!-- <li class="admin-catalog__list-item">
+          <button id="catalogButton" class="button button_small button_right">Добавить</button>
+        </div>
+        <ul class="admin-catalog__list">
+          <!-- <li class="admin-catalog__list-item">
               <form class="admin-catalog__form" action="./adminPanel.html" method="get">
                 <label for="catalogCard" class="admin-catalog__form-image">
                   <img src="../images/catalog_img.jpg" alt="" />
@@ -243,9 +229,10 @@
                 </div>
               </form>
             </li> -->
-          </ul>
-        </div>
+        </ul>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+</body>
+
 </html>
