@@ -1,6 +1,8 @@
 import toastr from 'toastr';
 import Splide from '@splidejs/splide';
+import intlTelInput from 'intl-tel-input';
 import '@splidejs/splide/css';
+import 'intl-tel-input/build/css/intlTelInput.css'
 import { getAllAbout } from '../http/aboutAPI';
 import { getAllCountry, getOneCountry } from '../http/countryAPI';
 import { getAllFaq } from '../http/faqAPI';
@@ -44,6 +46,8 @@ let splide = new Splide( '.splide', {
   omitEnd: true,
 });
 
+
+
 const servicesWrapper = document.querySelector('.services__wrapper');
 
 const faqWrapper = document.querySelector('.faq__content');
@@ -54,6 +58,18 @@ const applicationsMail = document.querySelector('#applicationsMail');
 const applicationsService = document.querySelector('#applicationsService');
 const applicationsWish = document.querySelector('#applicationsWish');
 const applicationsSend = document.querySelector('#applicationsSend');
+
+const iti = intlTelInput(applicationsPhone, {
+  separateDialCode: true, // Отображать код страны отдельно от номера
+  preferredCountries: ['us', 'gb'], // Предпочтительные страны
+  utilsScript: 'intl-tel-input/build/js/utils.js',
+})
+
+applicationsPhone.addEventListener('change', )
+
+const countryData = iti.getSelectedCountryData();
+const fullPhoneNumber = iti.getNumber();
+
 
 const feedbackFormListSelectedDefault = document.querySelector('.feedback__form-list-item');
 
@@ -369,6 +385,5 @@ applicationsSend.addEventListener('click', (e) => {
       item.classList.remove('feedback__form-list-item_selected');
     });
     feedbackListItems[0].classList.add('feedback__form-list-item_selected');
-    console.log(feedbackListItems);
   });
 });

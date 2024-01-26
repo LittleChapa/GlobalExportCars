@@ -1,1 +1,130 @@
-<!doctype html><html lang="ru"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="robots" content="noindex, nofollow"><meta name="format-detection" content="telephone=no"/><title>Панель администратора - Архив заявки</title><link rel="icon" href="../images/logo.png"/><script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script><link href="../css/style.016128c8.css" rel="stylesheet"></head><body><section class="admin-applications"><div class="container"><div class="admin-links"><a href="./adminApplications.html" class="admin-link">Назад</a></div><h2 class="title">Архив заявок</h2><ol class="admin-applications__list"></ol></div></section><script src="../scripts/adminDropDownList.js"></script><script defer="defer" src="../scripts/style.31d6cfe0d16ae931b73c.js"></script><script defer="defer" src="../scripts/adminDropDownList.31d6cfe0d16ae931b73c.js"></script><script defer="defer" src="../scripts/adminApplicationsArchive.0f9b55a9fd301f715b98.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="format-detection" content="telephone=no" />
+  <title>Панель администратора - Архив заявки</title>
+  <link rel="icon" href="../images/logo.png" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<link href="../css/style.e346c97f.css" rel="stylesheet"></head>
+
+<body>
+  <section class="admin-applications">
+    <div class="container">
+      <div class="admin-links">
+        <a href="./adminApplications.html" class="admin-link">Назад</a>
+      </div>
+      <h2 class="title">Архив заявок</h2>
+      <ol class="admin-applications__list">
+        <!-- <li class="admin-applications__list-item">
+            <form class="admin-applications__list-item-text" action="">
+              <p class="admin-applications__list-item-title">Имя: <span id="name"></span></p>
+              <p class="admin-applications__list-item-title">Услуга: <span id="service"></span></p>
+              <ul class="admin-applications__list admin-applications__list-inner">
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
+                </li>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Почта: <span id="email"></span></p>
+                </li>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
+                </li>
+                <hr class="admin-applications__list-inner-line" />
+                <li class="admin-applications__list-inner-item">
+                  <button class="button admin-applications__list-item-text-button" type="submit">
+                    Вернуть в заявки
+                  </button>
+                </li>
+              </ul>
+            </form>
+            <div class="admin-applications__list-item-icon" id="admin-applications-dropdown-list-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
+                <path
+                  d="M1 1.5L8 7.5L15 1.5"
+                  stroke="#AEBBFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </li>
+          <li class="admin-applications__list-item">
+            <form class="admin-applications__list-item-text" action="">
+              <p class="admin-applications__list-item-title">Имя: <span id="name"></span></p>
+              <p class="admin-applications__list-item-title">Услуга: <span id="service"></span></p>
+              <ul class="admin-applications__list admin-applications__list-inner">
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
+                </li>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Почта: <span id="email"></span></p>
+                </li>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
+                </li>
+                <hr class="admin-applications__list-inner-line" />
+                <li class="admin-applications__list-inner-item">
+                  <button class="button admin-applications__list-item-text-button" type="submit">
+                    Вернуть в заявки
+                  </button>
+                </li>
+              </ul>
+            </form>
+            <div class="admin-applications__list-item-icon" id="admin-applications-dropdown-list-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
+                <path
+                  d="M1 1.5L8 7.5L15 1.5"
+                  stroke="#AEBBFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </li>
+          <li class="admin-applications__list-item">
+            <form class="admin-applications__list-item-text" action="">
+              <p class="admin-applications__list-item-title">Имя: <span id="name"></span></p>
+              <p class="admin-applications__list-item-title">Услуга: <span id="service"></span></p>
+              <ul class="admin-applications__list admin-applications__list-inner">
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Телефон: <span id="phoneNumber"></span></p>
+                </li>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Почта: <span id="email"></span></p>
+                </li>
+                <li class="admin-applications__list-inner-item">
+                  <p class="admin-applications__list-item-title">Пожелания:<br /><span id="wishes"></span></p>
+                </li>
+                <hr class="admin-applications__list-inner-line" />
+                <li class="admin-applications__list-inner-item">
+                  <button class="button admin-applications__list-item-text-button" type="submit">
+                    Вернуть в заявки
+                  </button>
+                </li>
+              </ul>
+            </form>
+            <div class="admin-applications__list-item-icon" id="admin-applications-dropdown-list-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
+                <path
+                  d="M1 1.5L8 7.5L15 1.5"
+                  stroke="#AEBBFF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </li> -->
+      </ol>
+    </div>
+  </section>
+  <script src="../scripts/adminDropDownList.js"></script>
+<script defer src="../scripts/style.272ab99623e99cc27b61.js"></script><script defer src="../scripts/adminDropDownList.0e5df0d8d823483558a0.js"></script><script defer src="../scripts/adminApplicationsArchive.7382e301dbf7b6933f0c.js"></script></body>
+
+</html>
