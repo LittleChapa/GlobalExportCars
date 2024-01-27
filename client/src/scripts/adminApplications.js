@@ -30,6 +30,10 @@ getAllApplications()
       const innerList = document.createElement('ul');
       innerList.className = 'admin-applications__list admin-applications__list-inner';
 
+      innerList.addEventListener('click', (e) => {
+        e.stopPropagation()
+      })
+
       const innerPhoneItem = createInnerListItem('Телефон: ', 'phoneNumber', item.phone);
       const innerEmailItem = createInnerListItem('Почта: ', 'email', item.email);
       const innerWishesItem = createInnerListItem('Пожелания:<br />', 'wishes', item.wish);
@@ -121,9 +125,9 @@ getAllApplications()
     const applicationsListArrows = document.querySelectorAll('#admin-applications-dropdown-list-arrow');
     const applicationsListButtons = document.querySelectorAll('.admin-applications__list-item-text-button');
 
-    applicationsListItems.forEach((item, i) => {
+    applicationsListArrows.forEach((item, i) => {
       item.addEventListener('click', () => {
-        applicationsListItems.forEach((otherItem) => {
+        applicationsListArrows.forEach((otherItem) => {
           otherItem.classList.toggle('admin-applications__list-item_disabled');
         });
         item.classList.toggle('admin-applications__list-item_disabled');

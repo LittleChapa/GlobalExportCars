@@ -1,8 +1,8 @@
 import toastr from 'toastr';
 import Splide from '@splidejs/splide';
 import intlTelInput from 'intl-tel-input';
+import intlTelInputUtils from 'intl-tel-input/build/js/utils';
 import '@splidejs/splide/css';
-import 'intl-tel-input/build/css/intlTelInput.css'
 import { getAllAbout } from '../http/aboutAPI';
 import { getAllCountry, getOneCountry } from '../http/countryAPI';
 import { getAllFaq } from '../http/faqAPI';
@@ -60,15 +60,38 @@ const applicationsWish = document.querySelector('#applicationsWish');
 const applicationsSend = document.querySelector('#applicationsSend');
 
 const iti = intlTelInput(applicationsPhone, {
-  separateDialCode: true, // Отображать код страны отдельно от номера
-  preferredCountries: ['us', 'gb'], // Предпочтительные страны
-  utilsScript: 'intl-tel-input/build/js/utils.js',
+  defaultCountry: [],
+  preferredCountries: ['ru' , 'ua'], 
+  separateDialCode: false, // Отображать код страны отдельно от номера
+  autoInsertDialCode: false,
+  nationalMode: false,
+  autoPlaceholder: 'aggressive',
+  utilsScript: intlTelInputUtils,
 })
 
-applicationsPhone.addEventListener('change', )
+applicationsPhone.addEventListener('input', (e) => {
+  const isValid = iti.isValidNumber();
+  if (!isValid && applicationsPhone.value) {
+    applicationsPhone.style.borderColor = 'red'
+  } else {
+    applicationsPhone.style.borderColor = ''
+  }
+  const currentValue = event.target.value;
+  const numericValue = currentValue.replace(/[^\d+\s-]/g, ''); // Удаляем все нецифровые символы
+  e.target.value = numericValue;
+});
 
-const countryData = iti.getSelectedCountryData();
-const fullPhoneNumber = iti.getNumber();
+applicationsMail.addEventListener('input', (e) => {
+  const emailValue = e.target.value;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(emailValue) && applicationsMail.value) {
+    applicationsMail.style.borderColor = 'red'
+  } else {
+      applicationsMail.style.borderColor = ''
+  }
+})
+
+
 
 
 const feedbackFormListSelectedDefault = document.querySelector('.feedback__form-list-item');
@@ -362,10 +385,20 @@ getAllFaq()
 
 applicationsSend.addEventListener('click', (e) => {
   const feedbackListItems = document.querySelectorAll('.feedback__form-list-item');
-
+  const isValid = iti.isValidNumber();
   e.preventDefault();
   if (!applicationsName.value || !applicationsPhone.value || !applicationsMail.value || !applicationsWish.value) {
     toastr.error('Вы заполнили не все поля!');
+    return;
+  } else if (!isValid || applicationsMail.style.borderColor == 'red') {
+    let message = !isValid ? 'Неверный номер телефона!' : 'Неверная почта!';
+    if (!isValid && applicationsMail.style.borderColor == 'red') {
+      message = 'Неверный номер телефона и почта!'
+    }
+    toastr.error(message);
+    return;
+  } else if (applicationsMail.style.borderColor == 'red') {
+    toastr.error('Неверная почта!');
     return;
   }
   createApplications(
