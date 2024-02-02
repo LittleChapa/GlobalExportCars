@@ -7,7 +7,8 @@
     "start:dev": "webpack serve --env mode=development",
     "start:prod": "webpack serve --env mode=production",
     "build:dev": "webpack --env mode=development",
-    "build:prod": "webpack --env mode=production"
+    "build:prod": "webpack --env mode=production",
+    "build:docker": "docker build -t cars-frontend ."
   },
   "keywords": [],
   "author": "",

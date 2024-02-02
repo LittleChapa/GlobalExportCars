@@ -23,14 +23,14 @@ app.use("/api", router);
 app.use(errorHandler);
 
 // app.get('/admin', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../client/public/pages/adminAuth.html'));
+// res.sendFile(path.join(__dirname, '../client/public/pages/adminAuth.html'));
 // });
 
 const start = async () => {
   try {
     await sequelize.authenticate();
     await sequelize.sync();
-    app.listen(PORT, () => console.log(`server started  ${PORT}`));
+    app.listen(PORT, () => console.log(`server started ${PORT}`));
   } catch (e) {
     console.log(e);
   }
