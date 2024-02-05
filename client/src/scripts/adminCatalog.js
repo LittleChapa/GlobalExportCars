@@ -2,6 +2,7 @@ import toastr from 'toastr';
 import { onModal } from './adminModal';
 import { createCatalog, getAllCatalog, removeCatalog, updateCatalog } from '../http/catalogAPI';
 import { getAllCountry, getOneCountry } from '../http/countryAPI';
+import { check } from '../http/userAPI';
 const catalogModalButton = document.querySelector('#catalogButton');
 const catalogModal = document.querySelector('.admin-catalog-modal');
 const catalogModalForm = document.querySelector('.admin-catalog-modal__form');

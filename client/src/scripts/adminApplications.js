@@ -1,5 +1,5 @@
 import toastr from 'toastr';
-import { getAllApplications, updateApplications } from '../http/userAPI';
+import { check, getAllApplications, updateApplications } from '../http/userAPI';
 
 const adminApplicationsList = document.querySelector('.admin-applications__list');
 

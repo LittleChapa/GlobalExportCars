@@ -1,6 +1,7 @@
 import toastr from 'toastr';
 import { onModal } from './adminModal';
 import { createFaq, getAllFaq, removeFaq, updateFaq } from '../http/faqAPI';
+import { check } from '../http/userAPI';
 const faqModalButton = document.querySelector('#faqButton');
 const faqModal = document.querySelector('.admin-faq-modal');
 const faqModalForm = document.querySelector('.admin-faq-modal__form');
