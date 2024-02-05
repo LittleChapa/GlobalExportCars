@@ -55,6 +55,12 @@ module.exports = (env = { mode: "development" }) => {
         "scripts",
         "adminApplicationsArchive.js",
       ),
+      adminAuth: path.resolve(
+        __dirname,
+        "src",
+        "scripts",
+        "adminAuth.js",
+      ),
     },
     output: {
       path: path.resolve(__dirname, "build"),
@@ -80,7 +86,6 @@ module.exports = (env = { mode: "development" }) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, "public", "index.html"),
-
         filename: "index.html",
         chunks: ["style", "burger", "scroll", "dropDownList", "anchorLink"],
         chunkFilename: ["index.html"],
@@ -122,7 +127,7 @@ module.exports = (env = { mode: "development" }) => {
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, "public", "pages", "index.html"),
         filename: "admin/index.html",
-        chunks: ["style"],
+        chunks: ["style", "adminAuth"],
         chunkFilename: ["admin/index.html"],
         inject: "body",
       }),

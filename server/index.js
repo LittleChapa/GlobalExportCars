@@ -29,7 +29,19 @@ app.use(errorHandler);
 const start = async () => {
   try {
     await sequelize.authenticate();
-    await sequelize.sync();
+    await sequelize.sync().then(async () => {
+      const password = 'Gexc1488322';
+      const hashPassword = await bcrypt.hash(password, 5);
+      await models.User.findOrCreate({ where: { login: 'GlobalExportCars', password: hashPassword } })
+      await models.Country.findOrCreate({ where: { name: 'США' } })
+      await models.Country.findOrCreate({ where: { name: 'Европа' } })
+      await models.Country.findOrCreate({ where: { name: 'Корея' } })
+      await models.Country.findOrCreate({ where: { name: 'Китай' } })
+      await models.About.findOrCreate({ where: { id: 1 } })
+      await models.About.findOrCreate({ where: { id: 2 } })
+      await models.About.findOrCreate({ where: { id: 3 } })
+      await models.About.findOrCreate({ where: { id: 4 } })
+    });
     app.listen(PORT, () => console.log(`server started ${PORT}`));
   } catch (e) {
     console.log(e);

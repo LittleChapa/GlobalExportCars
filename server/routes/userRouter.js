@@ -4,7 +4,7 @@ const authMiddleware = require('../middleware/authMiddleware');
 const router = new Router();
 
 router.post('/login', userController.login);
-router.post('/registration', userController.registration);
+// router.post('/registration', authMiddleware, userController.registration);
 router.get('/check', authMiddleware, userController.check);
 router.post('/applications', userController.nodeMailerGet);
 
