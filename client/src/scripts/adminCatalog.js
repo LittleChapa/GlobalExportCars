@@ -113,7 +113,7 @@ getAllCountry().then((data) => {
                 'button admin-catalog__form-buttons-item admin-catalog__form-buttons-item_red-bg catalog-card-delete-button';
               deleteButton.textContent = 'Удалить';
 
-              image.src = process.env.APP_API_URL + newData[i].img;
+              image.src = `${process.env.APP_API_URL}/${newData[i].img}`;
               label.appendChild(image);
               label.appendChild(fileInput);
               label.appendChild(buttonSpan);
@@ -471,7 +471,7 @@ catalogButtonAdd.addEventListener('click', (e) => {
             'button admin-catalog__form-buttons-item admin-catalog__form-buttons-item_red-bg catalog-card-delete-button';
           deleteButton.textContent = 'Удалить';
 
-          image.src = process.env.APP_API_URL + newData[i].img;
+          image.src = `${process.env.APP_API_URL}/${newData[i].img}`;
           label.appendChild(image);
           label.appendChild(fileInput);
           label.appendChild(buttonSpan);
