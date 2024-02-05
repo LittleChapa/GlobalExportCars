@@ -38,10 +38,10 @@ const start = async () => {
       await models.Country.findOrCreate({ where: { name: 'Европа' } })
       await models.Country.findOrCreate({ where: { name: 'Корея' } })
       await models.Country.findOrCreate({ where: { name: 'Китай' } })
-      await models.About.findOrCreate({ where: { id: 1 } })
-      await models.About.findOrCreate({ where: { id: 2 } })
-      await models.About.findOrCreate({ where: { id: 3 } })
-      await models.About.findOrCreate({ where: { id: 4 } })
+      await models.About.findOrCreate({ where: { id: 1 }, text: 'Текст' })
+      await models.About.findOrCreate({ where: { id: 2 }, text: 'Текст' })
+      await models.About.findOrCreate({ where: { id: 3 }, text: 'Текст' })
+      await models.About.findOrCreate({ where: { id: 4 }, text: 'Текст' })
     });
     app.listen(PORT, () => console.log(`server started ${PORT}`));
   } catch (e) {
