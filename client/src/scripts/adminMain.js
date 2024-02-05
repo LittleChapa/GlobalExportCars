@@ -1,6 +1,5 @@
 import { getMain, updateMain } from '../http/mainAPI';
 import toastr from 'toastr';
-import { check } from '../http/userAPI';
 
 const adminMainButton = document.querySelector('#adminMainButton');
 const adminMainImage = document.querySelector('#adminMainImage');
@@ -16,10 +15,6 @@ toastr.options = {
   progressBar: true,
   timeOut: '3000',
 };
-
-check().catch(() => {
-  window.location.replace(window.location.origin + '/admin/');
-})
 
 getMain(1)
   .then((data) => {

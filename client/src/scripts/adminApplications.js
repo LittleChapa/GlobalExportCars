@@ -1,11 +1,7 @@
 import toastr from 'toastr';
-import { check, getAllApplications, updateApplications } from '../http/userAPI';
+import { getAllApplications, updateApplications } from '../http/userAPI';
 
 const adminApplicationsList = document.querySelector('.admin-applications__list');
-
-check().catch(() => {
-  window.location.replace(window.location.origin + '/admin/');
-})
 
 getAllApplications()
   .then((data) => {

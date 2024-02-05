@@ -2,7 +2,6 @@ import toastr from 'toastr';
 import { onModal } from './adminModal';
 import { createCatalog, getAllCatalog, removeCatalog, updateCatalog } from '../http/catalogAPI';
 import { getAllCountry, getOneCountry } from '../http/countryAPI';
-import { check } from '../http/userAPI';
 const catalogModalButton = document.querySelector('#catalogButton');
 const catalogModal = document.querySelector('.admin-catalog-modal');
 const catalogModalForm = document.querySelector('.admin-catalog-modal__form');
@@ -44,10 +43,6 @@ catalogButton.addEventListener('click', () => {
   catalogDropDownList.classList.toggle('catalog__list-select_active');
   catalogListArrow.classList.toggle('catalog__list-arrow_active');
 });
-
-check().catch(() => {
-  window.location.replace(window.location.origin + '/admin/');
-})
 
 getAllCountry().then((data) => {
   catalogListSelected.innerText = data[0].name;
