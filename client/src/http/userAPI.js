@@ -19,11 +19,11 @@ export const createApplications = async (name, tel, mail, service, descr) => {
 };
 
 export const updateApplications = async (id) => {
-  const { data } = await $host.patch('api/applications/update/' + id);
+  const { data } = await $authHost.patch('api/applications/update/' + id);
   return data;
 };
 
 export const getAllApplications = async () => {
-  const { data } = await $host.get('api/applications');
+  const { data } = await $authHost.get('api/applications');
   return data;
 };

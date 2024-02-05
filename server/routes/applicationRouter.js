@@ -4,6 +4,6 @@ const authMiddleware = require('../middleware/authMiddleware')
 const router = new Router();
 
 router.patch('/update/:id', authMiddleware, applicationController.update);
-router.get('/', applicationController.getAll);
+router.get('/', authMiddleware, applicationController.getAll);
 
 module.exports = router;

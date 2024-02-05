@@ -1,17 +1,17 @@
 import { $authHost, $host } from './index';
 
 export const createFaq = async (title, descr) => {
-  const { data } = await $host.post('api/faq/', { title, descr });
+  const { data } = await $authHost.post('api/faq/', { title, descr });
   return data;
 };
 
 export const updateFaq = async (id, title, descr) => {
-  const { data } = await $host.patch('api/faq/update/' + id, { title, descr });
+  const { data } = await $authHost.patch('api/faq/update/' + id, { title, descr });
   return data;
 };
 
 export const removeFaq = async (id) => {
-  const { data } = await $host.delete('api/faq/' + id);
+  const { data } = await $authHost.delete('api/faq/' + id);
   return data;
 };
 
