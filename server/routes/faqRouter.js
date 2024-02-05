@@ -1,5 +1,6 @@
 const Router = require('express');
 const faqController = require('../controllers/faqController');
+const authMiddleware = require('../middleware/authMiddleware');
 const router = new Router();
 
 router.post('/', authMiddleware, faqController.create);

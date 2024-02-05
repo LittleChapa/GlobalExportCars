@@ -1,5 +1,6 @@
 const Router = require('express');
 const serviceController = require('../controllers/serviceController');
+const authMiddleware = require('../middleware/authMiddleware');
 const router = new Router();
 
 router.post('/', authMiddleware, serviceController.create);
