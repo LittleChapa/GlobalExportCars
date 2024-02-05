@@ -18,7 +18,7 @@ toastr.options = {
 
 getMain(1)
   .then((data) => {
-    adminMainImage.src = process.env.APP_API_URL + '/' + data.img;
+    adminMainImage.src = `${process.env.APP_API_URL}/${data.img}`;
     adminMainTitle.innerText = data.title;
     adminMainDescr.innerText = data.descr;
     // image = data.img;
