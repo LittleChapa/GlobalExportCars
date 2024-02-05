@@ -9,6 +9,7 @@ const fileUpload = require("express-fileupload");
 const router = require("./routes/index");
 const errorHandler = require("./middleware/ErrorHandlingMiddleware");
 const path = require("path");
+const bcrypt = require('bcrypt');
 
 const PORT = process.env.PORT || 5000;
 
