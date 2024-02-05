@@ -10,6 +10,10 @@ const faqModalTitle = document.querySelector('#faqModalTitle');
 const faqModalDescr = document.querySelector('#faqModalDescr');
 const faqModalAdd = document.querySelector('#faqModalAdd');
 
+check().catch(() => {
+  window.location.replace(window.location.origin + '/admin/');
+})
+
 faqModalAdd.addEventListener('click', (e) => {
   e.preventDefault();
   if (!faqModalTitle.value || !faqModalDescr.value) {

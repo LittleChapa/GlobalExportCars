@@ -44,6 +44,10 @@ catalogButton.addEventListener('click', () => {
   catalogListArrow.classList.toggle('catalog__list-arrow_active');
 });
 
+check().catch(() => {
+  window.location.replace(window.location.origin + '/admin/');
+})
+
 getAllCountry().then((data) => {
   catalogListSelected.innerText = data[0].name;
   catalogSpanCountryId = catalogListSelected.attributes.countryId.value;

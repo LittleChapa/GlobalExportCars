@@ -1,5 +1,6 @@
 import toastr from 'toastr';
 import { getAllAbout, updateAbout } from '../http/aboutAPI';
+import { check } from '../http/userAPI';
 
 const adminAboutInput = document.querySelectorAll('.admin-about__form-item-input');
 const adminAboutButtons = document.querySelectorAll('.admin-about__form-button');
@@ -9,6 +10,10 @@ toastr.options = {
   progressBar: true,
   timeOut: '3000',
 };
+
+check().catch(() => {
+  window.location.replace(window.location.origin + '/admin/');
+})
 
 getAllAbout()
   .then((data) => {

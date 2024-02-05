@@ -16,6 +16,10 @@ toastr.options = {
   timeOut: '3000',
 };
 
+check().catch(() => {
+  window.location.replace(window.location.origin + '/admin/');
+})
+
 getMain(1)
   .then((data) => {
     adminMainImage.src = `${process.env.APP_API_URL}/${data.img}`;

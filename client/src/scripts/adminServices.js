@@ -11,6 +11,10 @@ const servicesModalPrice = document.querySelector('#serviceModalPrice');
 const servicesModalAdd = document.querySelector('#serviceModalAdd');
 const listContainer = document.querySelector('.admin-services__list');
 
+check().catch(() => {
+  window.location.replace(window.location.origin + '/admin/');
+})
+
 servicesModalAdd.addEventListener('click', (e) => {
   e.preventDefault();
   if (!servicesModalTitle.value || !servicesModalDescr.value || !servicesModalPrice.value) {
