@@ -115,6 +115,9 @@ faqModalAdd.addEventListener('click', (e) => {
 onModal(faqModalButton, faqModal, 'admin-faq-modal_active', faqModalForm);
 
 getAllFaq().then((data) => {
+  data.sort(function (a, b) {
+    return a.id - b.id;
+  });
   data.forEach((item) => {
     // Создаем элемент li с классом "admin-faq__list-item"
     let listItem = document.createElement('li');

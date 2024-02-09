@@ -293,7 +293,11 @@ getOneCountry(1).then((data) => {
 });
 
 getAllService().then((data) => {
-  data.forEach((item) => {
+  let dataCatalogs = data.catalogs;
+  dataCatalogs.sort(function (a, b) {
+    return a.id - b.id;
+  });
+  dataCatalogs.forEach((item) => {
     // Создаем элемент div с классом "services__card"
     let servicesCard = document.createElement('div');
     servicesCard.className = 'services__card';
@@ -325,7 +329,11 @@ getAllService().then((data) => {
 
 getAllFaq()
   .then((data) => {
-    data.forEach((item) => {
+    let dataCatalogs = data.catalogs;
+    dataCatalogs.sort(function (a, b) {
+      return a.id - b.id;
+    });
+    dataCatalogs.forEach((item) => {
       // Создаем элемент div с классом "faq__content-item"
       let contentItem = document.createElement('div');
       contentItem.className = 'faq__content-item';
