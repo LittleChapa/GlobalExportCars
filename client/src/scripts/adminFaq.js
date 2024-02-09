@@ -25,6 +25,9 @@ faqModalAdd.addEventListener('click', (e) => {
     toastr.success('Услуга успешно добавлена!');
 
     getAllFaq().then((data) => {
+      data.sort(function (a, b) {
+        return a.id - b.id;
+      });
       data.forEach((item) => {
         // Создаем элемент li с классом "admin-faq__list-item"
         let listItem = document.createElement('li');

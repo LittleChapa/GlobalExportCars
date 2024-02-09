@@ -2,6 +2,7 @@
 /server/node_modules
 /client/node_modules
 /styles
+/static
 
 # Local Netlify folder
 .netlify
